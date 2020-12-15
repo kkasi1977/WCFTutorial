@@ -45,6 +45,7 @@ namespace EmployeeService
         [DataMember(Order=4)]
         public DateTime DateOfBirth { get; set; }
 
+        [DataMember(Order=5)]
         public EmployeeType Type { get; set; }
     }
 

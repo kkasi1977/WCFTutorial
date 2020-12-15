@@ -44,9 +44,9 @@ URL : https://www.youtube.com/playlist?list=PL6n9fhu94yhVxEyaRMaMN_-qnDdNVGsL1
 >
 > Part5.Concept2.png
 >
-> **Part3.HelloService**
+> **Part3.HelloService (reuse)**
 >
-> **Part3.HelloWebClient**
+> **Part3.HelloWebClient (reuse)**
 
 ## Part 6 WCF DataContract and DataMember
 
@@ -62,3 +62,13 @@ URL : https://www.youtube.com/playlist?list=PL6n9fhu94yhVxEyaRMaMN_-qnDdNVGsL1
 >
 > **Part6.Client**
 
+## Part 7 KnownType attribute in WCF
+> Part7.Concept.png
+>
+> Part7.Concept.png
+> 
+> Part7.Script.sql
+> 
+> **Part6.EmployeeService (reuse)**
+> 
+> **Part6.Client (reuse)**
