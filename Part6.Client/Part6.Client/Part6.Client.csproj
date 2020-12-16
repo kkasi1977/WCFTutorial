@@ -58,6 +58,9 @@
     <None Include="Service References\EmployeeService\item.disco" />
     <None Include="Service References\EmployeeService\configuration91.svcinfo" />
     <None Include="Service References\EmployeeService\configuration.svcinfo" />
+    <None Include="Service References\EmployeeService\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\EmployeeService\Part6.Client.EmployeeService.Employee.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -65,7 +68,9 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>

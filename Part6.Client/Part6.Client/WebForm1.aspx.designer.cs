@@ -58,6 +58,69 @@ namespace Part6.Client {
         protected global::System.Web.UI.WebControls.TextBox txtDateOfBirth;
         
         /// <summary>
+        /// ddlEmployeeType 컨트롤입니다.
+        /// </summary>
+        /// <remarks>
+        /// 자동 생성 필드입니다.
+        /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하십시오.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlEmployeeType;
+        
+        /// <summary>
+        /// trAnnualSalary 컨트롤입니다.
+        /// </summary>
+        /// <remarks>
+        /// 자동 생성 필드입니다.
+        /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하십시오.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow trAnnualSalary;
+        
+        /// <summary>
+        /// txtAnnualSalary 컨트롤입니다.
+        /// </summary>
+        /// <remarks>
+        /// 자동 생성 필드입니다.
+        /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하십시오.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtAnnualSalary;
+        
+        /// <summary>
+        /// trHourlyPay 컨트롤입니다.
+        /// </summary>
+        /// <remarks>
+        /// 자동 생성 필드입니다.
+        /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하십시오.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow trHourlyPay;
+        
+        /// <summary>
+        /// txtHourlyPay 컨트롤입니다.
+        /// </summary>
+        /// <remarks>
+        /// 자동 생성 필드입니다.
+        /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하십시오.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtHourlyPay;
+        
+        /// <summary>
+        /// trHoursWorked 컨트롤입니다.
+        /// </summary>
+        /// <remarks>
+        /// 자동 생성 필드입니다.
+        /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하십시오.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow trHoursWorked;
+        
+        /// <summary>
+        /// txtHoursWorked 컨트롤입니다.
+        /// </summary>
+        /// <remarks>
+        /// 자동 생성 필드입니다.
+        /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하십시오.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtHoursWorked;
+        
+        /// <summary>
         /// btnGetEmployee 컨트롤입니다.
         /// </summary>
         /// <remarks>
