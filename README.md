@@ -72,3 +72,13 @@ URL : https://www.youtube.com/playlist?list=PL6n9fhu94yhVxEyaRMaMN_-qnDdNVGsL1
 > **Part6.EmployeeService (reuse)**
 > 
 > **Part6.Client (reuse)**
+
+## Part 8 Different ways of associating known types in wcf
+
+> Part8.Concept.png
+>
+> Part8.Concept2.png
+>
+> **Part6.EmployeeService (reuse)**
+>
+> **Part6.Client (reuse)**
