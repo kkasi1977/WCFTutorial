@@ -87,5 +87,11 @@ URL : https://www.youtube.com/playlist?list=PL6n9fhu94yhVxEyaRMaMN_-qnDdNVGsL1
 
 ## Part 9 How to enable tracing and message logging in wcf
 
-
+>  Part9.Concept.png
+>
+>  Part9.Concept2.png
+>
+> **Part6.EmployeeService (reuse)**
+>
+> **Part6.Client (reuse)**
 
