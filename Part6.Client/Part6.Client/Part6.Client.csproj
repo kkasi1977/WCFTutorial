@@ -58,10 +58,7 @@
     <None Include="Service References\EmployeeService\item.disco" />
     <None Include="Service References\EmployeeService\configuration91.svcinfo" />
     <None Include="Service References\EmployeeService\configuration.svcinfo" />
-    <None Include="Service References\EmployeeService\item3.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\EmployeeService\Part6.Client.EmployeeService.Employee.datasource">
+    <None Include="Service References\EmployeeService\Part6.Client.EmployeeService.EmployeeType.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\EmployeeService\Reference.svcmap">

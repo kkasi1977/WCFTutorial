@@ -95,3 +95,33 @@ URL : https://www.youtube.com/playlist?list=PL6n9fhu94yhVxEyaRMaMN_-qnDdNVGsL1
 >
 > **Part6.Client (reuse)**
 
+## Part 10 Message Contract in WCF
+
+> Part10.Concept.png
+>
+> Part10.Concept2.png
+>
+> Part10.Concept3.png
+>
+> Part10.Concept4.png
+>
+> Part10.Concept5.png
+>
+> **Part6.EmployeeService (reuse)**
+>
+> **Part6.Client (reuse)**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
