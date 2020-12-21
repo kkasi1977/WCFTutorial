@@ -11,6 +11,7 @@ namespace EmployeeService
     [ServiceContract]
     public interface IEmployeeService
     {
+   
         [OperationContract]
         Employee GetEmployee(int Id);
 

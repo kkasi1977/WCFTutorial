@@ -28,8 +28,8 @@ using System.Runtime.Serialization;
 namespace EmployeeService
 {
    
-    [KnownType(typeof(FullTimeEmployee))]
-    [KnownType(typeof(PartTimeEmployee))]
+    //[KnownType(typeof(FullTimeEmployee))]
+    //[KnownType(typeof(PartTimeEmployee))]
     [DataContract(Namespace="http://pragimtech.com/2013/07/07/Employee")]
     public class Employee
     {
