@@ -10,8 +10,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Part6.Client</RootNamespace>
-    <AssemblyName>Part6.Client</AssemblyName>
+    <RootNamespace>Client</RootNamespace>
+    <AssemblyName>Client</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <UseIISExpress>false</UseIISExpress>
   </PropertyGroup>
@@ -54,13 +54,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="WebForm1.aspx" />
+    <None Include="Service References\EmployeeService\Client.EmployeeService.EmployeeType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\EmployeeService\EmployeeService.wsdl" />
     <None Include="Service References\EmployeeService\item.disco" />
     <None Include="Service References\EmployeeService\configuration91.svcinfo" />
     <None Include="Service References\EmployeeService\configuration.svcinfo" />
-    <None Include="Service References\EmployeeService\Part6.Client.EmployeeService.EmployeeType.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <None Include="Service References\EmployeeService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>

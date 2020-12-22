@@ -38,7 +38,7 @@ namespace EmployeeService
                         {
                             Id = Convert.ToInt32(reader["Id"]),
                             Name = reader["Name"].ToString(),
-                            Gender = reader["Gender"].ToString(),
+                            //Gender = reader["Gender"].ToString(),
                             DateOfBirth = Convert.ToDateTime( reader["DateOfBirth"]),
                             Type = EmployeeType.FullTimeEmployee,
                             AnnualSalary = Convert.ToInt32(reader["AnnualSalary"]),
@@ -51,7 +51,7 @@ namespace EmployeeService
                         {
                             Id = Convert.ToInt32(reader["Id"]),
                             Name = reader["Name"].ToString(),
-                            Gender = reader["Gender"].ToString(),
+                            //Gender = reader["Gender"].ToString(),
                             DateOfBirth = Convert.ToDateTime(reader["DateOfBirth"]),
                             Type = EmployeeType.PartTimeEmployee,
                             HourlyPay = Convert.ToInt32(reader["HourlyPay"]),
@@ -87,12 +87,12 @@ namespace EmployeeService
                 };
                 cmd.Parameters.Add(parameterName);
 
-                SqlParameter parameterGender = new SqlParameter
-                {
-                    ParameterName = "@Gender",
-                    Value = employee.Gender
-                };
-                cmd.Parameters.Add(parameterGender);
+                //SqlParameter parameterGender = new SqlParameter
+                //{
+                //    ParameterName = "@Gender",
+                //    Value = employee.Gender
+                //};
+                //cmd.Parameters.Add(parameterGender);
 
                 SqlParameter parameterCity = new SqlParameter
                 {

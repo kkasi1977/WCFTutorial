@@ -18,8 +18,8 @@ namespace EmployeeService
         [DataMember(Order=2)]
         public string Name { get; set; }
 
-        [DataMember(Order=3)]
-        public string Gender { get; set; }
+        //[DataMember(Order=3)]
+        //public string Gender { get; set; }
 
         [DataMember(Order=4)]
         public DateTime DateOfBirth { get; set; }
@@ -27,7 +27,7 @@ namespace EmployeeService
         [DataMember(Order=5)]
         public EmployeeType Type { get; set; }
 
-        [DataMember(Order = 6)]  //, IsRequired = true
+        [DataMember(Order = 6, IsRequired = false)]
         public string City { get; set; }  
     }
 

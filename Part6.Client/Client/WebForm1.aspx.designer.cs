@@ -7,7 +7,7 @@
 // </자동 생성됨>
 //------------------------------------------------------------------------------
 
-namespace Part6.Client {
+namespace Client {
     
     
     public partial class WebForm1 {

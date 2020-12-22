@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Part6.Client.EmployeeService {
+namespace Client.EmployeeService {
     using System.Runtime.Serialization;
     
     
@@ -29,11 +29,11 @@ namespace Part6.Client.EmployeeService {
         
         // CODEGEN: EmployeeRequest 메시지의 래퍼 네임스페이스(http://MyCompany.com/Employee)가 기본값(http://tempuri.org/)과 일치하지 않으므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeService/GetEmployee", ReplyAction="http://tempuri.org/IEmployeeService/GetEmployeeResponse")]
-        Part6.Client.EmployeeService.EmployeeInfo GetEmployee(Part6.Client.EmployeeService.EmployeeRequest request);
+        Client.EmployeeService.EmployeeInfo GetEmployee(Client.EmployeeService.EmployeeRequest request);
         
         // CODEGEN: SaveEmployee 작업이 RPC 또는 문서 래핑이 아니므로 메시지 계약을 생성합니다.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEmployeeService/SaveEmployee", ReplyAction="http://tempuri.org/IEmployeeService/SaveEmployeeResponse")]
-        Part6.Client.EmployeeService.SaveEmployeeResponse SaveEmployee(Part6.Client.EmployeeService.EmployeeInfo request);
+        Client.EmployeeService.SaveEmployeeResponse SaveEmployee(Client.EmployeeService.EmployeeInfo request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -76,7 +76,7 @@ namespace Part6.Client.EmployeeService {
         public System.DateTime DOB;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://MyCompany.com/Employee", Order=4)]
-        public Part6.Client.EmployeeService.EmployeeType Type;
+        public Client.EmployeeService.EmployeeType Type;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://MyCompany.com/Employee", Order=5)]
         public int AnnualSalary;
@@ -90,7 +90,7 @@ namespace Part6.Client.EmployeeService {
         public EmployeeInfo() {
         }
         
-        public EmployeeInfo(int Id, string Name, string Gender, System.DateTime DOB, Part6.Client.EmployeeService.EmployeeType Type, int AnnualSalary, int HourlyPay, int HoursWorked) {
+        public EmployeeInfo(int Id, string Name, string Gender, System.DateTime DOB, Client.EmployeeService.EmployeeType Type, int AnnualSalary, int HourlyPay, int HoursWorked) {
             this.Id = Id;
             this.Name = Name;
             this.Gender = Gender;
@@ -113,12 +113,12 @@ namespace Part6.Client.EmployeeService {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IEmployeeServiceChannel : Part6.Client.EmployeeService.IEmployeeService, System.ServiceModel.IClientChannel {
+    public interface IEmployeeServiceChannel : Client.EmployeeService.IEmployeeService, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class EmployeeServiceClient : System.ServiceModel.ClientBase<Part6.Client.EmployeeService.IEmployeeService>, Part6.Client.EmployeeService.IEmployeeService {
+    public partial class EmployeeServiceClient : System.ServiceModel.ClientBase<Client.EmployeeService.IEmployeeService>, Client.EmployeeService.IEmployeeService {
         
         public EmployeeServiceClient() {
         }
@@ -140,15 +140,15 @@ namespace Part6.Client.EmployeeService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Part6.Client.EmployeeService.EmployeeInfo Part6.Client.EmployeeService.IEmployeeService.GetEmployee(Part6.Client.EmployeeService.EmployeeRequest request) {
+        Client.EmployeeService.EmployeeInfo Client.EmployeeService.IEmployeeService.GetEmployee(Client.EmployeeService.EmployeeRequest request) {
             return base.Channel.GetEmployee(request);
         }
         
-        public int GetEmployee(string LicenseKey, int EmployeeId, out string Name, out string Gender, out System.DateTime DOB, out Part6.Client.EmployeeService.EmployeeType Type, out int AnnualSalary, out int HourlyPay, out int HoursWorked) {
-            Part6.Client.EmployeeService.EmployeeRequest inValue = new Part6.Client.EmployeeService.EmployeeRequest();
+        public int GetEmployee(string LicenseKey, int EmployeeId, out string Name, out string Gender, out System.DateTime DOB, out Client.EmployeeService.EmployeeType Type, out int AnnualSalary, out int HourlyPay, out int HoursWorked) {
+            Client.EmployeeService.EmployeeRequest inValue = new Client.EmployeeService.EmployeeRequest();
             inValue.LicenseKey = LicenseKey;
             inValue.EmployeeId = EmployeeId;
-            Part6.Client.EmployeeService.EmployeeInfo retVal = ((Part6.Client.EmployeeService.IEmployeeService)(this)).GetEmployee(inValue);
+            Client.EmployeeService.EmployeeInfo retVal = ((Client.EmployeeService.IEmployeeService)(this)).GetEmployee(inValue);
             Name = retVal.Name;
             Gender = retVal.Gender;
             DOB = retVal.DOB;
@@ -160,12 +160,12 @@ namespace Part6.Client.EmployeeService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Part6.Client.EmployeeService.SaveEmployeeResponse Part6.Client.EmployeeService.IEmployeeService.SaveEmployee(Part6.Client.EmployeeService.EmployeeInfo request) {
+        Client.EmployeeService.SaveEmployeeResponse Client.EmployeeService.IEmployeeService.SaveEmployee(Client.EmployeeService.EmployeeInfo request) {
             return base.Channel.SaveEmployee(request);
         }
         
-        public void SaveEmployee(int Id, string Name, string Gender, System.DateTime DOB, Part6.Client.EmployeeService.EmployeeType Type, int AnnualSalary, int HourlyPay, int HoursWorked) {
-            Part6.Client.EmployeeService.EmployeeInfo inValue = new Part6.Client.EmployeeService.EmployeeInfo();
+        public void SaveEmployee(int Id, string Name, string Gender, System.DateTime DOB, Client.EmployeeService.EmployeeType Type, int AnnualSalary, int HourlyPay, int HoursWorked) {
+            Client.EmployeeService.EmployeeInfo inValue = new Client.EmployeeService.EmployeeInfo();
             inValue.Id = Id;
             inValue.Name = Name;
             inValue.Gender = Gender;
@@ -174,7 +174,7 @@ namespace Part6.Client.EmployeeService {
             inValue.AnnualSalary = AnnualSalary;
             inValue.HourlyPay = HourlyPay;
             inValue.HoursWorked = HoursWorked;
-            Part6.Client.EmployeeService.SaveEmployeeResponse retVal = ((Part6.Client.EmployeeService.IEmployeeService)(this)).SaveEmployee(inValue);
+            Client.EmployeeService.SaveEmployeeResponse retVal = ((Client.EmployeeService.IEmployeeService)(this)).SaveEmployee(inValue);
         }
     }
 }
