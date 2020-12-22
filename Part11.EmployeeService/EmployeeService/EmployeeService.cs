@@ -15,9 +15,9 @@ namespace EmployeeService
     public class EmployeeService : IEmployeeService
     {
 
-        public EmployeeInfo GetEmployee(EmployeeRequest request)
+        public Employee GetEmployee(int Id)
         {
-            Console.WriteLine("License Key = " + request.LicenseKey);
+ 
             Employee employee = null;
             string cs = ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString;
             using (SqlConnection con = new SqlConnection(cs))
@@ -26,7 +26,7 @@ namespace EmployeeService
                 cmd.CommandType = CommandType.StoredProcedure;
                 SqlParameter parameterId = new SqlParameter();
                 parameterId.ParameterName = "@Id";
-                parameterId.Value = request.EmployeeId;
+                parameterId.Value = Id;
                 cmd.Parameters.Add(parameterId);
                 con.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
@@ -41,7 +41,8 @@ namespace EmployeeService
                             Gender = reader["Gender"].ToString(),
                             DateOfBirth = Convert.ToDateTime( reader["DateOfBirth"]),
                             Type = EmployeeType.FullTimeEmployee,
-                            AnnualSalary = Convert.ToInt32(reader["AnnualSalary"])
+                            AnnualSalary = Convert.ToInt32(reader["AnnualSalary"]),
+                            City = reader["City"].ToString()
                         };
                     }
                     else
@@ -54,17 +55,18 @@ namespace EmployeeService
                             DateOfBirth = Convert.ToDateTime(reader["DateOfBirth"]),
                             Type = EmployeeType.PartTimeEmployee,
                             HourlyPay = Convert.ToInt32(reader["HourlyPay"]),
-                            HoursWorked = Convert.ToInt32(reader["HoursWorked"])
+                            HoursWorked = Convert.ToInt32(reader["HoursWorked"]),
+                             City = reader["City"].ToString()
                         };
                     }
                 }
             }
 
 
-            return new EmployeeInfo( employee);
+            return employee;
         }
 
-        public void SaveEmployee(EmployeeInfo employee)
+        public void SaveEmployee(Employee employee)
         {
             string cs = ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString;
             using (SqlConnection con = new SqlConnection(cs))
@@ -92,10 +94,17 @@ namespace EmployeeService
                 };
                 cmd.Parameters.Add(parameterGender);
 
+                SqlParameter parameterCity = new SqlParameter
+                {
+                    ParameterName = "@City",
+                    Value = employee.City
+                };
+                cmd.Parameters.Add(parameterCity);
+
                 SqlParameter parameterDateOfBirth = new SqlParameter
                 {
                     ParameterName = "@DateOfBirth",
-                    Value = employee.DOB
+                    Value = employee.DateOfBirth
                 };
                 cmd.Parameters.Add(parameterDateOfBirth);
 
@@ -106,12 +115,12 @@ namespace EmployeeService
                 };
                 cmd.Parameters.Add(parameterEmployeeType);
 
-                if (employee.Type ==  EmployeeType.FullTimeEmployee)
+                if (employee.GetType() ==  typeof(FullTimeEmployee))
                 {
                     SqlParameter parameterAnnualSalary = new SqlParameter
                     {
                         ParameterName = "@AnnualSalary",
-                        Value = employee.AnnualSalary
+                        Value = ((FullTimeEmployee)employee).AnnualSalary
                     };
                     cmd.Parameters.Add(parameterAnnualSalary);
                 }
@@ -120,14 +129,14 @@ namespace EmployeeService
                     SqlParameter parameterHourlyPay = new SqlParameter
                     {
                         ParameterName = "@HourlyPay",
-                        Value = employee.HourlyPay
+                        Value = ((PartTimeEmployee)employee).HourlyPay
                     };
                     cmd.Parameters.Add(parameterHourlyPay);
 
                     SqlParameter parameterHoursWorked = new SqlParameter
                     {
                         ParameterName = "@HoursWorked",
-                        Value = employee.HoursWorked
+                        Value = ((PartTimeEmployee)employee).HoursWorked
                     };
                     cmd.Parameters.Add(parameterHoursWorked);
                 }
