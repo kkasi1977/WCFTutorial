@@ -95,7 +95,9 @@ Please refer to the **Data** directory for course materials.
 
 [Part 13 YouTube](https://www.youtube.com/watch?v=XSWwZMM_lB4&list=PL6n9fhu94yhVxEyaRMaMN_-qnDdNVGsL1&index=13)
 
-
+> **Part12.EmployeeService (reuse) **
+>
+> **Part12.Client (reuse)  **
 
 
 

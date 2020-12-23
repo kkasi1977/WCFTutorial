@@ -12,8 +12,13 @@ using System.Configuration;
 namespace EmployeeService
 {
     // 참고: "리팩터링" 메뉴에서 "이름 바꾸기" 명령을 사용하여 코드 및 config 파일에서 클래스 이름 "EmployeeService"을 변경할 수 있습니다.
+    
+    [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single)]  // InstanceContextMode - 서비스 클래스의 단일 인스턴스가 여러 클라이언트를 지원할 것임.
     public class EmployeeService : IEmployeeService
     {
+
+        private Employee _lastSavedEmployee;  //SaveEmployee 호출시 
+
 
         public Employee GetEmployee(int Id)
         {
@@ -63,11 +68,19 @@ namespace EmployeeService
             }
 
 
+            //Check : xml로 직렬화 하기 직전에 이전 담은 전역변수의 ExtensionData 객체를 치환한다.
+            if (_lastSavedEmployee != null && Id == _lastSavedEmployee.Id) 
+            {
+                employee.ExtensionData = _lastSavedEmployee.ExtensionData;
+            }
+
             return employee;
         }
 
         public void SaveEmployee(Employee employee)
         {
+            _lastSavedEmployee = employee; // 역 직렬화 후에 바로 객체를 전역 변수에 담는다.
+
             string cs = ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString;
             using (SqlConnection con = new SqlConnection(cs))
             {
