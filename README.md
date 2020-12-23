@@ -115,9 +115,13 @@ Please refer to the **Data** directory for course materials.
 >
 > **Part15.CalculatorClient**
 
+## Part 16 Soap faults in WCF
 
+[Part 16 YouTube](https://www.youtube.com/watch?v=EI8ZWezcC8Y&list=PL6n9fhu94yhVxEyaRMaMN_-qnDdNVGsL1&index=16)
 
-
+> **Part15.CalculatorService (reuse)** 
+>
+> **Part15.CalculatorClient (reuse)**
 
 
 

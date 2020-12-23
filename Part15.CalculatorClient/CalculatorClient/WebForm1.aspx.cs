@@ -16,10 +16,17 @@ namespace CalculatorClient
 
         protected void btnDivide_Click(object sender, EventArgs e)
         {
-            int numerator = Convert.ToInt32(txtNumerator.Text);
-            int denominator = Convert.ToInt32(txtDenominator.Text);
-            CalculatorService.CalculatorServiceClient client = new CalculatorService.CalculatorServiceClient("BasicHttpBinding_ICalculatorService");
-            lblResult.Text = client.Divide(numerator, denominator).ToString();
+            try
+            {
+                int numerator = Convert.ToInt32(txtNumerator.Text);
+                int denominator = Convert.ToInt32(txtDenominator.Text);
+                CalculatorService.CalculatorServiceClient client = new CalculatorService.CalculatorServiceClient("WSHttpBinding_ICalculatorService");
+                lblResult.Text = client.Divide(numerator, denominator).ToString();
+            }
+            catch (Exception ex)
+            {
+                lblResult.Text = ex.Message;
+            }
         }
     }
 }
