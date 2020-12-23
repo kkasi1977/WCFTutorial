@@ -99,7 +99,13 @@ Please refer to the **Data** directory for course materials.
 >
 > **Part12.Client (reuse)  **
 
+## Part 14 Risks of implementing IExtensibleDataObject interface
 
+[Part 14 YouTube](https://www.youtube.com/watch?v=EI8ZWezcC8Y&list=PL6n9fhu94yhVxEyaRMaMN_-qnDdNVGsL1&index=14)
+
+> **Part12.EmployeeService (reuse) **
+>
+> **Part12.Client (reuse) **
 
 
 

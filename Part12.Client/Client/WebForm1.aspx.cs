@@ -5,6 +5,13 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
  
+//Part13 , Part14 
+//EmployeeService 측에서 DataContract에 Gender 요소를 주석처리하고 서비스 메소드에서 Gender 요소 서비스를 주석처리한다.
+//그리고 Client에서 서비스 업데이트를 하지 않은 상태로 Part 13, Part 14 테스트를 진행한다. 
+//Client측에는 Gender를 요청하지만 서비스에는 없는 상황일경우  클라이언트에서 저장시점에서
+//성별을 입력하여 저장 요청시 서비스측은 역직렬화할때 IExtensibleDataObject에 unKnown 요소를 저장처리하게된다. 
+//이러한 기능에 대한 사용방법과 위험에 대비하여 Web.config에 behaviors에 기능을 제어할 수 있는 옵션도 소개한다. 
+
 
 namespace Client
 {

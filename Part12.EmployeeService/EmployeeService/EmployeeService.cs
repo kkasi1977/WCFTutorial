@@ -12,8 +12,10 @@ using System.Configuration;
 namespace EmployeeService
 {
     // 참고: "리팩터링" 메뉴에서 "이름 바꾸기" 명령을 사용하여 코드 및 config 파일에서 클래스 이름 "EmployeeService"을 변경할 수 있습니다.
-    
-    [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single)]  // InstanceContextMode - 서비스 클래스의 단일 인스턴스가 여러 클라이언트를 지원할 것임.
+
+    //InstanceContextMode - 서비스 클래스의 단일 인스턴스가 여러 클라이언트를 지원할 것임.
+    //IgnoreExtensionDataObject - true로 설정시 Employee객체의 IExtensibleDataObject 에 알려지지 않은 요소들을 무시하면서 저장하지 않을 것임.
+    [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single /*,IgnoreExtensionDataObject=true*/)]  
     public class EmployeeService : IEmployeeService
     {
 
