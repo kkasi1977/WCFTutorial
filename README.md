@@ -107,11 +107,13 @@ Please refer to the **Data** directory for course materials.
 >
 > **Part12.Client (reuse) **
 
+## Part 15 Exception handling in WCF
 
+[Part 15 YouTube](https://www.youtube.com/watch?v=EI8ZWezcC8Y&list=PL6n9fhu94yhVxEyaRMaMN_-qnDdNVGsL1&index=15)
 
-
-
-
+> **Part15.CalculatorService** 
+>
+> **Part15.CalculatorClient**
 
 
 

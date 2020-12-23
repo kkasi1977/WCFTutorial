@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculatorClient", "CalculatorClient\CalculatorClient.csproj", "{35CEE4CF-95C1-4A92-8BD1-8D8655246DDB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{35CEE4CF-95C1-4A92-8BD1-8D8655246DDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35CEE4CF-95C1-4A92-8BD1-8D8655246DDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35CEE4CF-95C1-4A92-8BD1-8D8655246DDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35CEE4CF-95C1-4A92-8BD1-8D8655246DDB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
