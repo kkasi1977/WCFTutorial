@@ -151,6 +151,14 @@ Please refer to the **Data** directory for course materials.
 >
 > **Part19.WindowClient **
 
+## Part 20 Centralized exception handling in WCF by implementing IErrorHandler interface
+
+[Part 20 YouTube](https://www.youtube.com/watch?v=EI8ZWezcC8Y&list=PL6n9fhu94yhVxEyaRMaMN_-qnDdNVGsL1&index=20)
+
+> **Part20.CalculatorService ** 
+>
+> **Part20.WindowClient **
+
 
 
 
