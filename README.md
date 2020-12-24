@@ -133,9 +133,23 @@ Please refer to the **Data** directory for course materials.
 >
 > **Part17.WindowClient **
 
+## Part 18 Throwing fault exceptions from a WCF service 
+
+[Part 18 YouTube](https://www.youtube.com/watch?v=EI8ZWezcC8Y&list=PL6n9fhu94yhVxEyaRMaMN_-qnDdNVGsL1&index=18)
+
+> **Part18.CalculatorService ** 
+>
+> **Part18.WindowClient **
 
 
 
+## Part 19 Creating and throwing strongly typed SOAP faults
+
+[Part 19 YouTube](https://www.youtube.com/watch?v=EI8ZWezcC8Y&list=PL6n9fhu94yhVxEyaRMaMN_-qnDdNVGsL1&index=19)
+
+> **Part19.CalculatorService ** 
+>
+> **Part19.WindowClient **
 
 
 
