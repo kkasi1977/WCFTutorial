@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.ServiceModel;
 
 namespace CalculatorClient
 {
@@ -23,10 +24,14 @@ namespace CalculatorClient
                 CalculatorService.CalculatorServiceClient client = new CalculatorService.CalculatorServiceClient("WSHttpBinding_ICalculatorService");
                 lblResult.Text = client.Divide(numerator, denominator).ToString();
             }
-            catch (Exception ex)
+            catch (FaultException faultException)
             {
-                lblResult.Text = ex.Message;
+                lblResult.Text = faultException.Message;
             }
+            //catch (Exception ex)
+            //{
+            //    lblResult.Text = ex.Message;
+            //}
         }
     }
 }

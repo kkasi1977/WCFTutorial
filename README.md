@@ -125,6 +125,14 @@ Please refer to the **Data** directory for course materials.
 
 
 
+## Part 17 Unhandled exceptions in WCF
+
+[Part 17 YouTube](https://www.youtube.com/watch?v=EI8ZWezcC8Y&list=PL6n9fhu94yhVxEyaRMaMN_-qnDdNVGsL1&index=17)
+
+> **Part17.CalculatorService ** 
+>
+> **Part17.WindowClient **
+
 
 
 
