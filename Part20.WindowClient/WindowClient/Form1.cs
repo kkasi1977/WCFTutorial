@@ -29,15 +29,19 @@ namespace WindowClient
 
                 lblResult.Text = client.Divide(numerator, denominator).ToString();
             }
-            catch (FaultException<CalculatorService.DivideByZeroFault> faultException)
+            //catch (FaultException<CalculatorService.DivideByZeroFault> faultException)
+            //{
+            //    /*Part 19 Stongly Typed SOAP Faults*/
+            //    lblResult.Text = faultException.Detail.Error + " - " +faultException.Detail.Details;
+            //}
+            catch (FaultException faultException)
             {
-                /*Part 19 Stongly Typed SOAP Faults*/
-                lblResult.Text = faultException.Detail.Error + " - " +faultException.Detail.Details;
+                lblResult.Text = faultException.Message; 
             }
-            catch (Exception ex)
-            {
-                lblResult.Text = ex.Message;
-            }
+            //catch (Exception ex)
+            //{
+            //    lblResult.Text = ex.Message;
+            //}
 
         }
 
