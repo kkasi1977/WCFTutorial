@@ -1,0 +1,49 @@
+Part21 Bindings in WCF 
+A WCF service endpoint consists of 3 things
+A-Address (Address where the WCF Service is available) 
+B-Binding (We will discuss this in more detail in this video) 
+C-Contract (Specifies what the service can do. For example, the service contract describes which operations the client can perform on the service) 
+
+So, what is a binding in a WCF service?
+A WCF binding defines how the client needs to communicate with the service. 
+The WCF binding that you choose determines the following for the communication between the client and the service. 
+1. Transport Protocol(for example, HTTP, TCP, NamedPipe, MSMQ) 
+2. Message Encoding(for example, text/XML, binary) 
+3. Protocols(for example, reliable messaging, transaction support) 
+ 
+In WCF there are several built-in bindings that we could use. 
+The complete list can be found at the folowing MSDN link.
+
+http://msdn.microsoft.com/en-us/library/ms730879(v-vs.110).aspx
+
+Depending on your application requirement, you pick the binding that best suit your needs.
+If you are not sure, which binding to use there is a flowchart at the following link that can be handy.
+
+http://stackoverflow.com/questions/10849920/diferent-wcf-bindings-their-differences-and-commpatibility-with-other-platforms 
+
+As WCF is very extensible, you can also create a custom binding and use it, if none of the system provided bindings suit your needs.
+
+
+
+WCF의 Part21 바인딩
+WCF 서비스 끝점은 세 가지로 구성됩니다.
+A-Address (WCF 서비스를 사용할 수있는 주소)
+B-Binding (이 비디오에서 자세히 설명하겠습니다)
+C-Contract (서비스가 수행 할 수있는 작업을 지정합니다. 예를 들어 서비스 계약은 클라이언트가 서비스에서 수행 할 수있는 작업을 설명합니다.)
+
+그렇다면 WCF 서비스의 바인딩이란 무엇입니까?
+WCF 바인딩은 클라이언트가 서비스와 통신하는 방법을 정의합니다.
+선택한 WCF 바인딩은 클라이언트와 서비스 간의 통신에 대해 다음 사항을 결정합니다.
+1. 전송 프로토콜 (예 : HTTP, TCP, NamedPipe, MSMQ)
+2. 메시지 인코딩 (예 : 텍스트 / XML, 바이너리)
+3. 프로토콜 (예 : 신뢰할 수있는 메시징, 트랜잭션 지원)
+ 
+WCF에는 사용할 수있는 몇 가지 기본 제공 바인딩이 있습니다.
+전체 목록은 다음 MSDN 링크에서 찾을 수 있습니다.
+http://msdn.microsoft.com/en-us/library/ms730879(v-vs.110).aspx
+
+애플리케이션 요구 사항에 따라 요구 사항에 가장 적합한 바인딩을 선택합니다.
+어떤 바인딩을 사용해야할지 확실하지 않은 경우 다음 링크에 유용한 순서도가 있습니다.
+http://stackoverflow.com/questions/10849920/diferent-wcf-bindings-their-differences-and-commpatibility-with-other-platforms
+
+WCF는 매우 확장 가능하므로 시스템에서 제공하는 바인딩이 필요에 맞지 않는 경우 사용자 지정 바인딩을 만들어 사용할 수도 있습니다.

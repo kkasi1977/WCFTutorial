@@ -159,6 +159,14 @@ Please refer to the **Data** directory for course materials.
 >
 > **Part20.WindowClient **
 
+## Part 21 Bindings in WCF
+
+[Part 21 YouTube](https://www.youtube.com/watch?v=EI8ZWezcC8Y&list=PL6n9fhu94yhVxEyaRMaMN_-qnDdNVGsL1&index=21)
+
+[Part 21 MSDN](http://msdn.microsoft.com/en-us/library/ms730879(v-vs.110).aspx)
+
+[Part 21 stackoverflow.com](http://stackoverflow.com/questions/10849920/diferent-wcf-bindings-their-differences-and-commpatibility-with-other-platforms) 
+
 
 
 
