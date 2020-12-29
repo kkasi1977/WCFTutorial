@@ -167,6 +167,12 @@ Please refer to the **Data** directory for course materials.
 
 [Part 21 stackoverflow.com](http://stackoverflow.com/questions/10849920/diferent-wcf-bindings-their-differences-and-commpatibility-with-other-platforms) 
 
+## Part 22 Configure WCF service endpoint dynamically in code
+
+[Part 22 YouTube](https://www.youtube.com/watch?v=EI8ZWezcC8Y&list=PL6n9fhu94yhVxEyaRMaMN_-qnDdNVGsL1&index=22)
+
+
+
 
 
 
