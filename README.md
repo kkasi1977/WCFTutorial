@@ -15,7 +15,7 @@ Please refer to the **Data** directory for course materials.
 
 [Part 2 YouTube](https://www.youtube.com/watch?v=3Qt7TTS1u4A&list=PL6n9fhu94yhVxEyaRMaMN_-qnDdNVGsL1&index=2)
 
-> **IHelloRemotingService**
+> **Part2.IHelloRemotingService**
 
 ## Part 3 Creating a wcf service
 
@@ -171,9 +171,17 @@ Please refer to the **Data** directory for course materials.
 
 [Part 22 YouTube](https://www.youtube.com/watch?v=EI8ZWezcC8Y&list=PL6n9fhu94yhVxEyaRMaMN_-qnDdNVGsL1&index=22)
 
+## Part 23 Hosting WCF service
 
+[Part 23 YouTube](https://www.youtube.com/watch?v=EI8ZWezcC8Y&list=PL6n9fhu94yhVxEyaRMaMN_-qnDdNVGsL1&index=23)
 
+## Part 24 Self hosting a wcf service in console application
 
+[Part 24 YouTube](https://www.youtube.com/watch?v=EI8ZWezcC8Y&list=PL6n9fhu94yhVxEyaRMaMN_-qnDdNVGsL1&index=24)
+
+**Part24.HelloService**
+
+**Part24.WindowClient**
 
 
 
