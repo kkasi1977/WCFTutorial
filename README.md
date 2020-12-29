@@ -191,6 +191,14 @@ Please refer to the **Data** directory for course materials.
 
 **Part25.WindowClient**
 
+## Part 26 What is a windows service
+
+[Part 26 YouTube](https://www.youtube.com/watch?v=EI8ZWezcC8Y&list=PL6n9fhu94yhVxEyaRMaMN_-qnDdNVGsL1&index=26)
+
+
+
+
+
 
 
 
