@@ -1,0 +1,59 @@
+Part26 What is a Windows Service
+
+What is a windows service and how do they differ from regular applications and programs
+
+A windows service is similar to any other program or application running on a windows machine.
+The following are the differences between a windows service and a regular application
+1. Windows service runs in the background
+2. They can be configured to start automatically when the system starts
+3. They don't have user interface.
+
+How to view all the services installed on a windows machine
+1. Open run windows by pressing Windows + R key
+2. Type services.msc and press enter
+3. The services window should display all the services installed on your computer
+
+What is the use of windows services
+Windows services provide core operationg system features such as 
+Event Logging - Windows EventLog Service
+ProvidingSecurity - Windows Firewall Service
+Error Reporting - Windows Error Reporting Service
+
+
+When would an asp.net developer use a windows service
+In general, we should create a Windows Service to run code in the background all the time, whithout any sort of user interaction.
+An asp.net developer can use a windows service to host a wcf service. 
+We can then configure the windows service to start automatically when the computer starts.
+This makes our WCF service always available for clients to consume, even if no-one is logged on, on that computer.
+
+
+
+
+Part26 Windows 서비스 란?
+
+Windows 서비스 란 무엇이며 일반 응용 프로그램 및 프로그램과 어떻게 다른가요?
+
+Windows 서비스는 Windows 시스템에서 실행되는 다른 프로그램이나 응용 프로그램과 유사합니다.
+다음은 Windows 서비스와 일반 응용 프로그램의 차이점입니다.
+1. Windows 서비스가 백그라운드에서 실행됩니다.
+2. 시스템이 시작될 때 자동으로 시작되도록 구성 할 수 있습니다.
+3. 사용자 인터페이스가 없습니다.
+
+Windows 시스템에 설치된 모든 서비스를 보는 방법
+1. Windows + R 키를 눌러 실행 창을 엽니 다.
+2. services.msc를 입력하고 Enter 키를 누릅니다.
+3. 서비스 창에 컴퓨터에 설치된 모든 서비스가 표시됩니다.
+
+Windows 서비스의 사용은 무엇입니까
+Windows 서비스는 다음과 같은 핵심 운영 시스템 기능을 제공합니다.
+이벤트 로깅-Windows EventLog 서비스
+보안 제공-Windows 방화벽 서비스
+오류보고-Windows 오류보고 서비스
+
+asp.net 개발자는 언제 Windows 서비스를 사용합니까?
+일반적으로 모든 종류의 사용자 상호 작용없이 항상 백그라운드에서 코드를 실행하는 Windows 서비스를 만들어야합니다.
+asp.net 개발자는 Windows 서비스를 사용하여 wcf 서비스를 호스팅 할 수 있습니다.
+그런 다음 컴퓨터가 시작될 때 자동으로 시작되도록 Windows 서비스를 구성 할 수 있습니다.
+이렇게하면 클라이언트가 해당 컴퓨터에 로그온 한 사람이 없더라도 항상 WCF 서비스를 사용할 수 있습니다.
+
+
