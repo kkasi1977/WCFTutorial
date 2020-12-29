@@ -183,9 +183,13 @@ Please refer to the **Data** directory for course materials.
 
 **Part24.WindowClient**
 
+## Part 25 Self hosting a wcf service in winforms application
 
+[Part 25 YouTube](https://www.youtube.com/watch?v=EI8ZWezcC8Y&list=PL6n9fhu94yhVxEyaRMaMN_-qnDdNVGsL1&index=25)
 
+**Part25.HelloService**
 
+**Part25.WindowClient**
 
 
 
