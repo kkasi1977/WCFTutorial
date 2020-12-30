@@ -205,7 +205,9 @@ Please refer to the **Data** directory for course materials.
 
 
 
+## Part 28 Advatages and disadvantages of hosting a wcf service in a windows services
 
+[Part 28 YouTube](https://www.youtube.com/watch?v=EI8ZWezcC8Y&list=PL6n9fhu94yhVxEyaRMaMN_-qnDdNVGsL1&index=28)
 
 
 

@@ -1,0 +1,36 @@
+Part 28 Advatages and disadvantages of hosting a wcf service in a windows services
+
+Advantages & Disadvantages
+Advantages of hosting a wcf service in a windows service
+1. The Windows Service can be configured to start automatically when the system starts without having the need for any user to logon on the machine.
+This means that, the WCF service that the windows service hosts also starts automatically.
+
+2. The Windows Service can be configured to automatically restart and recover when failures occur.
+
+3. Supports all bindings and transport protocols
+
+Disadvantages of hosting a wcf service in a windows service 
+1. Involves writing custom code to create a windows service.
+
+2. Windows service that hosts the wcf service must be deployed to the production server.
+
+3. Difficut to debug the wcf service, as we need to attath the process within which the windows service is running.
+
+
+Part 28 Windows 서비스에서 wcf 서비스 호스팅의 장단점
+
+장점 단점
+Windows 서비스에서 wcf 서비스를 호스팅 할 때의 이점
+1. 사용자가 컴퓨터에 로그온 할 필요없이 시스템이 시작될 때 자동으로 시작되도록 Windows 서비스를 구성 할 수 있습니다.
+즉, Windows 서비스가 호스팅하는 WCF 서비스도 자동으로 시작됩니다.
+
+2. 장애가 발생하면 자동으로 다시 시작하고 복구하도록 Windows 서비스를 구성 할 수 있습니다.
+
+3. 모든 바인딩 및 전송 프로토콜 지원
+
+Windows 서비스에서 wcf 서비스 호스팅의 단점
+1. Windows 서비스를 생성하기위한 사용자 지정 코드 작성을 포함합니다.
+
+2. wcf 서비스를 호스팅하는 Windows 서비스는 프로덕션 서버에 배포되어야합니다.
+
+3. Windows 서비스가 실행되는 프로세스를 연결해야하므로 wcf 서비스를 디버깅하는 데 어려움이 있습니다.
