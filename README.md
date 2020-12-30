@@ -195,9 +195,13 @@ Please refer to the **Data** directory for course materials.
 
 [Part 26 YouTube](https://www.youtube.com/watch?v=EI8ZWezcC8Y&list=PL6n9fhu94yhVxEyaRMaMN_-qnDdNVGsL1&index=26)
 
+## Part 27 Hosting a wcf service in a windows service
 
+[Part 27 YouTube](https://www.youtube.com/watch?v=EI8ZWezcC8Y&list=PL6n9fhu94yhVxEyaRMaMN_-qnDdNVGsL1&index=27)
 
+**Part27.HelloService**
 
+**Part27.WindowClient**
 
 
 
