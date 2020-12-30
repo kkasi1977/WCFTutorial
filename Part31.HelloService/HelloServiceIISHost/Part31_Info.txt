@@ -1,0 +1,111 @@
+﻿Part 31 Hosting WCF in IIS using WAS
+By default IIS supports only HTTP protocol.
+If you want to use NON-HTTP protocols like TCP, we need to install
+ "Windows Communication Foundation Non-HTTP Activation" component 
+and WAS(Windows Process Activation Service) component. 
+WAS is supported on the following platforms with IIS 7 and above.
+1. Windows Vista
+2. Windows 7 
+3. Windows Server 2008 
+
+To find out which version of IIS you have, 
+1. Open IIS
+2. Click on "Help" menu item 
+3. Select "About Internet Information Services" 
+
+To suppoort NON-HTTP protocols in IIS, we need to do the following 
+1. Install WAS(Windows Process Activation Service) 
+  and "Windows Communication Foundation Non-HTTP Activation component" 
+2. Enable NON-HTTP protocol support in IIS for you application 
+
+Step 1 : Install WAS(Windows Process Activation Service) 
+ and "Windows Communication Foundation Non-HTTP Activation 
+1) Go to control panel
+2) Click "Programs and Features"
+3) Click on "Trun Windows features on or off option"
+4) In "Windows Features" windows, expand "Microsoft.NET Framework 3.5.1" and select.
+5) Click OK
+
+Step 2 Enable NON-HTTP protocol support in IIS for you application 
+1) Open IIS
+2) Expand "Defalt Web Site" folder 
+3) Right click on your application -Manage Appliction - Advanced Settings 
+4) In "Advanced Settings" window, set Enabled Protocols=http,net.tcp
+5) Finally click OK
+
+At this point we should be able to use both HTTP and TCP protocols
+
+if you get this error
+Could not load type "System.ServiceModel.Activation.HttpModule' from assembly 'System.ServiceModel, version=3.0.0.0, Culture=neutral, PublickKeyToken=b77a5c561934e089'
+
+Run Visual Studio Command Prompt as an administrator and execute the following command 
+aspnet_regiis.exe -iru
+
+if you get this error
+{System.ServiceModel.EndpointNotFoundException: The message could not be dispatched because the service at the endpoint address 'net.tcp://venkat-pc/HelloService/HelloService.svc/HelloService' is unavailable for the 
+protocol of the address.
+
+Run Visual Studio Command Prompt as an Administrator and execute the following command
+c:\Windows\Microsoft.NET\Framework64\v4.0.30319\ServiceModelReg.exe -r
+
+These days most of the companies host their wcf services in IIS with WAS(Windows Process Activation Service) 
+enabled as it has the following benefits.
+1) No code required to host the service
+2) IIS provides process recycling, automatic message based activation, idle time management etc
+3) Suppoorts all transport protocols including the NON-HTTP protocols like TCP, named pipes etc
+
+
+Part 31 WAS를 사용하여 IIS에서 WCF 호스팅
+기본적으로 IIS는 HTTP 프로토콜 만 지원합니다.
+TCP와 같은 HTTP가 아닌 프로토콜을 사용하려면 다음을 설치해야합니다.
+ "Windows Communication Foundation 비 HTTP 활성화"구성 요소
+WAS (Windows Process Activation Service) 구성 요소입니다.
+WAS는 IIS 7 이상이 설치된 다음 플랫폼에서 지원됩니다.
+1. Windows Vista
+2. 윈도우 7
+3. 윈도우 서버 2008
+
+사용중인 IIS 버전을 확인하려면
+1. IIS 열기
+2. "도움말"메뉴 항목을 클릭하십시오
+3. "인터넷 정보 서비스 정보"를 선택합니다.
+
+IIS에서 HTTP가 아닌 프로토콜을 지원하려면 다음을 수행해야합니다.
+1. WAS (Windows Process Activation Service) 설치
+  및 "Windows Communication Foundation 비 HTTP 활성화 구성 요소"
+2. 응용 프로그램에 대해 IIS에서 NON-HTTP 프로토콜 지원 활성화
+
+1 단계 : WAS (Windows Process Activation Service) 설치
+ 및 "Windows Communication Foundation 비 HTTP 활성화
+1) 제어판으로 이동
+2) "프로그램 및 기능"을 클릭하십시오.
+3) "Trun Windows 기능 켜기 또는 끄기 옵션"을 클릭하십시오.
+4) "Windows 기능"창에서 "Microsoft.NET Framework 3.5.1"을 확장하고 선택합니다.
+5) 확인을 클릭합니다.
+
+2 단계 응용 프로그램에 대해 IIS에서 NON-HTTP 프로토콜 지원 활성화
+1) IIS 열기
+2) "웹 사이트 기본 설정"폴더를 확장합니다.
+3) 응용 프로그램을 마우스 오른쪽 버튼으로 클릭-응용 프로그램 관리-고급 설정
+4) "고급 설정"창에서 활성화 된 프로토콜 = http, net.tcp를 설정합니다.
+5) 마지막으로 확인을 클릭하십시오.
+
+이 시점에서 우리는 HTTP와 TCP 프로토콜을 모두 사용할 수 있어야합니다.
+
+이 오류가 발생하면
+어셈블리 'System.ServiceModel, 버전 = 3.0.0.0, Culture = neutral, PublickKeyToken = b77a5c561934e089'에서 "System.ServiceModel.Activation.HttpModule '유형을로드 할 수 없습니다.
+
+관리자 권한으로 Visual Studio 명령 프롬프트를 실행하고 다음 명령을 실행합니다.
+aspnet_regiis.exe -iru
+
+이 오류가 발생하면
+{System.ServiceModel.EndpointNotFoundException : 끝점 주소 'net.tcp : //venkat-pc/HelloService/HelloService.svc/HelloService'의 서비스를 주소 프로토콜에 사용할 수 없기 때문에 메시지를 발송할 수 없습니다.
+
+관리자 권한으로 Visual Studio 명령 프롬프트를 실행하고 다음 명령을 실행합니다.
+c : \ Windows \ Microsoft.NET \ Framework64 \ v4.0.30319 \ ServiceModelReg.exe -r
+
+요즘 대부분의 회사는 WAS (Windows Process Activation Service)가 활성화 된 IIS에서 wcf 서비스를 호스팅합니다. 이
+는 다음과 같은 이점이 있기 때문입니다.
+1) 서비스 호스팅에 필요한 코드 없음
+2) IIS는 프로세스 재활용, 자동 메시지 기반 활성화, 유휴 시간 관리 등을 제공합니다.
+3) TCP, 명명 된 파이프 등과 같은 비 HTTP 프로토콜을 포함한 모든 전송 프로토콜을 지원합니다.

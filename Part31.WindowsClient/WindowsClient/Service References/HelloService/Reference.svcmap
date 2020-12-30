@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="6ea80862-837e-4ba7-bcfc-7f4bb373a5ff" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://averatec/HelloService/HelloService.svc?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="HelloService.xsd" MetadataType="Schema" ID="c2563401-a6ce-4bf9-8a27-7aacb99750b9" SourceId="1" SourceUrl="http://averatec/HelloService/HelloService.svc?xsd=xsd0" />
+    <MetadataFile FileName="HelloService1.xsd" MetadataType="Schema" ID="001647a5-ceba-49ff-8924-9ae113821276" SourceId="1" SourceUrl="http://averatec/HelloService/HelloService.svc?xsd=xsd1" />
+    <MetadataFile FileName="HelloService.wsdl" MetadataType="Wsdl" ID="bea987df-0388-40c9-adba-a8bfed99e4ae" SourceId="1" SourceUrl="http://averatec/HelloService/HelloService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
