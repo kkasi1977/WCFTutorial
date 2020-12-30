@@ -209,6 +209,14 @@ Please refer to the **Data** directory for course materials.
 
 [Part 28 YouTube](https://www.youtube.com/watch?v=EI8ZWezcC8Y&list=PL6n9fhu94yhVxEyaRMaMN_-qnDdNVGsL1&index=28)
 
+## Part 29 Hosting a wcf service in IIS
+
+[Part 29 YouTube](https://www.youtube.com/watch?v=EI8ZWezcC8Y&list=PL6n9fhu94yhVxEyaRMaMN_-qnDdNVGsL1&index=29)
+
+**Part29.HelloService**
+
+**Part29.WindowClient**
+
 
 
 

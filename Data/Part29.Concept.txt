@@ -1,0 +1,37 @@
+Part 29 Step by step
+
+1. Step 1  WCF Service Website 프로젝트 
+
+1) WCF Service 웹싸이트를 추가한다. 
+2) App_Code의 생성된 파일은 삭제한다.
+   -> HelloService 프로젝을 호스팅하는 목적이므로
+3) HelloService 프로젝트를 참조한다. 
+4) Service.svc파일명 변경 
+   -> HelloService.svc 
+5) Service.svc 내용 변경
+   ->  CodeBehind="~/App_Code/Service.cs" -> 삭제
+   ->  Service 변경 -> 네임스페이스.클래스명 -> HelloService.HelloService
+6) Web.config 내용 변경
+   -> 전체 삭제 -> Host 프로젝트의 App.config 복사 붙여넣기
+   -> 기본주소 삭제 :  baseAddress="net.tcp://localhost:8090 
+        IIS는 http만 지원됨, net.tcp:// 프로토콜은 지원안됨
+   -> 바인딩 수정 -> netTcpBinding -> basicHttpBinding 
+        Windows 정품 인증 서비스를 사용하면 Http 프로토콜만 사용할 수 있음.
+        HTTP프로토콜 관련 바인딩이 지원됨. 
+
+2. Step 2  IIS Hosting 
+1) IIS 실행
+    : inet mgr 
+2) 가상디렉터리 생성
+   -> 응용프로그램 추가, 
+       별칭 HelloService,  응용프로그램 풀 ASP.NET v4.0, 실제경로 c:\.....\HelloServiceIISHost
+        OK.
+    -> HelloService 우클릭 -> 콘텐츠 보기 전환 클릭
+3) 프로젝트 빌드 
+4) IIS -> HelloService.svc -> 마우스 우클릭 -> 찾아보기 -> 브라우저 실행 및 연결확인
+ 
+3. Step 3  Client Test
+1) 서비스 참조 
+   Address : http://averatec/HelloService/HelloService.svc?wsdl
+
+
