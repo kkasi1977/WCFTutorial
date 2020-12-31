@@ -30,15 +30,17 @@
         {
             this.btnRequestReplyOperation = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.btnRequestReplyOperation_ThrowsException = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnRequestReplyOperation
             // 
-            this.btnRequestReplyOperation.Location = new System.Drawing.Point(54, 32);
+            this.btnRequestReplyOperation.Location = new System.Drawing.Point(12, 177);
             this.btnRequestReplyOperation.Name = "btnRequestReplyOperation";
-            this.btnRequestReplyOperation.Size = new System.Drawing.Size(75, 23);
+            this.btnRequestReplyOperation.Size = new System.Drawing.Size(452, 23);
             this.btnRequestReplyOperation.TabIndex = 0;
-            this.btnRequestReplyOperation.Text = "button1";
+            this.btnRequestReplyOperation.Text = "Request Reply Operation";
             this.btnRequestReplyOperation.UseVisualStyleBackColor = true;
             this.btnRequestReplyOperation.Click += new System.EventHandler(this.btnRequestReplyOperation_Click);
             // 
@@ -46,16 +48,38 @@
             // 
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 12;
-            this.listBox1.Location = new System.Drawing.Point(54, 76);
+            this.listBox1.Location = new System.Drawing.Point(12, 11);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(120, 88);
+            this.listBox1.Size = new System.Drawing.Size(453, 160);
             this.listBox1.TabIndex = 1;
+            // 
+            // btnRequestReplyOperation_ThrowsException
+            // 
+            this.btnRequestReplyOperation_ThrowsException.Location = new System.Drawing.Point(12, 203);
+            this.btnRequestReplyOperation_ThrowsException.Name = "btnRequestReplyOperation_ThrowsException";
+            this.btnRequestReplyOperation_ThrowsException.Size = new System.Drawing.Size(452, 23);
+            this.btnRequestReplyOperation_ThrowsException.TabIndex = 2;
+            this.btnRequestReplyOperation_ThrowsException.Text = "Request Reply Operation - ThrowsException";
+            this.btnRequestReplyOperation_ThrowsException.UseVisualStyleBackColor = true;
+            this.btnRequestReplyOperation_ThrowsException.Click += new System.EventHandler(this.btnRequestReplyOperation_ThrowsException_Click);
+            // 
+            // btnClear
+            // 
+            this.btnClear.Location = new System.Drawing.Point(12, 229);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(452, 23);
+            this.btnClear.TabIndex = 3;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.ClientSize = new System.Drawing.Size(476, 262);
+            this.Controls.Add(this.btnClear);
+            this.Controls.Add(this.btnRequestReplyOperation_ThrowsException);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.btnRequestReplyOperation);
             this.Name = "Form1";
@@ -68,6 +92,8 @@
 
         private System.Windows.Forms.Button btnRequestReplyOperation;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Button btnRequestReplyOperation_ThrowsException;
+        private System.Windows.Forms.Button btnClear;
     }
 }
 

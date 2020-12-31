@@ -21,12 +21,40 @@ namespace WindowsClient
  
         private void btnRequestReplyOperation_Click(object sender, EventArgs e)
         {
-            listBox1.Items.Add("Request-Reply Operation Started @ " + DateTime.Now.ToString());
-            btnRequestReplyOperation.Enabled = false;
-            listBox1.Items.Add(client.RequestReplyOperation());
-            btnRequestReplyOperation.Enabled = true;
-            listBox1.Items.Add("Request-Reply Operation Completed @ " + DateTime.Now.ToString());
-            listBox1.Items.Add("");
+            try
+            {
+                listBox1.Items.Add("Request-Reply Operation Started @ " + DateTime.Now.ToString());
+                btnRequestReplyOperation.Enabled = false;
+                listBox1.Items.Add(client.RequestReplyOperation());
+                btnRequestReplyOperation.Enabled = true;
+                listBox1.Items.Add("Request-Reply Operation Completed @ " + DateTime.Now.ToString());
+                listBox1.Items.Add("");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            listBox1.Items.Clear();
+        }
+
+        private void btnRequestReplyOperation_ThrowsException_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                listBox1.Items.Add("Request-Reply Throws Exception Operation Started @ " + DateTime.Now.ToString());
+                client.RequestReplyOperation_ThrowsException();
+                listBox1.Items.Add("Request-Reply Throws Exception Operation Completed @ " + DateTime.Now.ToString());
+                listBox1.Items.Add("");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
