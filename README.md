@@ -240,3 +240,11 @@ Please refer to the **Data** directory for course materials.
 **Part33.SampleService**
 
 **Part33.WindowClient**
+
+## Part 34 Duplex Message Exchange Pattern in WCF
+
+[Part 34 YouTube](https://www.youtube.com/watch?v=YC8l6lkfXFg&list=PL6n9fhu94yhVxEyaRMaMN_-qnDdNVGsL1&index=34)
+
+**Part34.DuplexClient**
+
+**Part34.ReportService**
