@@ -20,7 +20,15 @@ namespace Client
 
         private void button1_Click(object sender, EventArgs e)
         {
+            DownloadService.DownloadServiceClient client = new DownloadService.DownloadServiceClient();
+            DownloadService.File file = client.DownloadDocument();
 
+            if (System.IO.Directory.Exists(@"C:\DownloadedFiles") == false)
+            {
+                System.IO.Directory.CreateDirectory(@"C:\DownloadedFiles");
+            }
+            System.IO.File.WriteAllBytes(@"C:\DownloadedFiles\" + file.Name, file.Content);
+            MessageBox.Show(file.Name + " is Downloaded");
         }
     }
 }
