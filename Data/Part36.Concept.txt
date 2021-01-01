@@ -1,0 +1,32 @@
+Part 36 Instancing modes in WCF 
+There are 3 instancing modes
+1. PerCall - A new instance of serevice object is created for every request, irrespective of whether the request comes from the same client or a different client.
+
+2. PerSession - A new instance of the service object is created for each new client session and maintanined for the duration of that session.
+
+3. Single - A single instance of the service object is created and handles all requests for the lifetime of the application, irrespective of whether the request comes form the same client or a different client. 
+
+How do you specify what instancing mode you want to use?
+Use ServiceBehavior attribute and specify InstanceContextMode.
+[ServiceBehavior(InstanceContextMode = InstanceContextMode.PerCall)]
+public class SimpleService : ISimpleService
+{
+ .....
+}
+
+
+Part 36 WCF의 인스턴스 모드
+3 가지 인스 턴싱 모드가 있습니다.
+1. PerCall-요청이 동일한 클라이언트에서 오는지 또는 다른 클라이언트에서 오는지에 관계없이 모든 요청에 대해 serevice 객체의 새 인스턴스가 생성됩니다.
+
+2. PerSession-새 클라이언트 세션마다 서비스 개체의 새 인스턴스가 만들어지고 해당 세션 동안 유지 관리됩니다.
+
+3. 단일-서비스 개체의 단일 인스턴스가 생성되고 요청이 동일한 클라이언트에서 오는지 또는 다른 클라이언트에서 오는지에 관계없이 애플리케이션의 수명 동안 모든 요청을 처리합니다.
+
+사용하려는 인스턴스 모드를 어떻게 지정합니까?
+ServiceBehavior 특성을 사용하고 InstanceContextMode를 지정합니다.
+[ServiceBehavior (InstanceContextMode = InstanceContextMode.PerCall)]
+public class SimpleService : ISimpleService
+{
+  .....
+}
