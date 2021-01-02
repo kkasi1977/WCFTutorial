@@ -248,3 +248,31 @@ Please refer to the **Data** directory for course materials.
 **Part34.DuplexClient**
 
 **Part34.ReportService**
+
+## Part 35 Sending large messages in WCF using MTOM
+
+[Part 35 YouTube](https://www.youtube.com/watch?v=YC8l6lkfXFg&list=PL6n9fhu94yhVxEyaRMaMN_-qnDdNVGsL1&index=35)
+
+**Part35.Client**
+
+**Part35.DownlaodService**
+
+## Part 36 Instancing modes in WCF
+
+[Part 36 YouTube](https://www.youtube.com/watch?v=YC8l6lkfXFg&list=PL6n9fhu94yhVxEyaRMaMN_-qnDdNVGsL1&index=36)
+
+## Part 37 PerCall instance context mode in WCF
+
+[Part 37 YouTube](https://www.youtube.com/watch?v=YC8l6lkfXFg&list=PL6n9fhu94yhVxEyaRMaMN_-qnDdNVGsL1&index=37)
+
+**Part37.Client**
+
+**Part37.SimpleService**
+
+## Part 38 PerSession instance context mode in WCF
+
+[Part 38 YouTube](https://www.youtube.com/watch?v=YC8l6lkfXFg&list=PL6n9fhu94yhVxEyaRMaMN_-qnDdNVGsL1&index=38)
+
+**Part38.WindowsClient**
+
+**Part38.SimpleService**
