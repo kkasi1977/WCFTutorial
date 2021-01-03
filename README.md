@@ -279,8 +279,16 @@ Please refer to the **Data** directory for course materials.
 
 ## Part 39 PerSession WCF Services
 
-[Part 39 YouTube](https://www.youtube.com/watch?v=YC8l6lkfXFg&list=PL6n9fhu94yhVxEyaRMaMN_-qnDdNVGsL1&index=398)
+[Part 39 YouTube](https://www.youtube.com/watch?v=YC8l6lkfXFg&list=PL6n9fhu94yhVxEyaRMaMN_-qnDdNVGsL1&index=39)
 
 **Part39.WindowsClient**
 
 **Part39.SimpleService**
+
+## Part 40 How to retrieve the sessionid in WCF service and in the client application
+
+[Part 40 YouTube](https://www.youtube.com/watch?v=YC8l6lkfXFg&list=PL6n9fhu94yhVxEyaRMaMN_-qnDdNVGsL1&index=40)
+
+**Part40.WindowsClient**
+
+**Part40.SimpleService**
