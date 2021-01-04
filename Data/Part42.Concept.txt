@@ -28,11 +28,11 @@ http://msdn.microsoft.com/en-us/library/system.servicemodel.sessionmodel(v=vs.11
 Part 42 SessionMode 열거 형
 세션을 사용하기위한 바인딩을 요구, 허용 또는 금지하려면 서비스 계약과 함께 SessionMode 열거를 사용합니다.
 
-허용됨 : 바인딩이 지원하는 경우 서비스 계약이 세션을 지원합니다.
+Allowed : 바인딩이 지원하는 경우 서비스 계약이 세션을 지원합니다.
 
 NotAllowed : 서비스 계약은 세션을 시작하는 바인딩을 지원하지 않습니다.
 
-필수 : 서비스 계약에는 세션을 지원하는 바인딩이 필요합니다.
+Required : 서비스 계약에는 세션을 지원하는 바인딩이 필요합니다.
 
 예 1 : 서비스 InstanceContextMode를 Single로 설정하고 SessionMode를 Allowed로 설정합니다.
 

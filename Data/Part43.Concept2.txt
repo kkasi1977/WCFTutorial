@@ -1,0 +1,54 @@
+
+/* Part 43 Single concurrency mode in WCF 
+
+ * Where a WCF service handles client requests concurrently or not depends on 3 things
+ * 1. Service Instance Context Mode
+ * 2. Service Concurrency Mode and 
+ * 3. Where if the binding supports session or not 
+ * 
+ * Setting service
+ *  [ServiceBehavior(ConcurrencyMode = ConcurrencyMode.Single, InstanceContextMode = InstanceContextMode.PerCall)]
+ *  [ServiceBehavior(ConcurrencyMode = ConcurrencyMode.Single, InstanceContextMode = InstanceContextMode.PerSession)]
+ *  
+ * Test 1
+ * Instance Context Mode        : PerCAll 
+ * Concurrency Mode              : Single
+ * Binding supports session     : No    -> ex) basicHttpBinding
+ * Concurrent Calls processed   : Yes    -> 쓰레드가 서비스의 메소드를 동시적으로 호출 처리된다.
+ * Throughput Impact             : Positive
+ * 
+ * Test 2
+ * Instance Context Mode        : PerCAll 
+ * Concurrency Mode              : Single
+ * Binding supports session     : Yes    -> ex) netTcpBinding
+ * Concurrent Calls processed   : No     -> 쓰레드가 서비스의 메소드를 동시적으로 호출하지 않고 잠금이 발생한다.  처리중인 쓰레드가 완료될때가지 기다리다가 잠금이 풀리면 호출 처리된다.
+ * Throughput Impact             : Negative
+ * 
+ * Test 3
+ * Instance Context Mode        : PerSession 
+ * Concurrency Mode              : Single
+ * Binding supports session     : No -> ex) basicHttpBinding
+ * Concurrent Calls processed   : Yes
+ * Throughput Impact             : Positive
+ * 
+ * Test 4
+ * Instance Context Mode        : PerSession 
+ * Concurrency Mode              : Single
+ * Binding supports session     : Yes   -> ex) netTcpBinding
+ * Concurrent Calls processed   : Yes - Between Different client requests   No - For the request from the same client
+ * Throughput Impact             : Positive - Between clients    Negative - For the same client request
+ * 
+ * Test 5
+ * Instance Context Mode        : Single 
+ * Concurrency Mode              : Single
+ * Binding supports session     : No -> ex) basicHttpBinding
+ * Concurrent Calls processed   : No
+ * Throughput Impact             : Negative - Between clients and for the requests from the same client 
+ * 
+ * Test 6
+ * Instance Context Mode        : Single 
+ * Concurrency Mode              : Single
+ * Binding supports session     : YES -> ex) netTcpBinding
+ * Concurrent Calls processed   : No
+ * Throughput Impact             : Negative - Between clients and for the requests from the same client 
+*/
