@@ -325,5 +325,13 @@ Please refer to the **Data** directory for course materials.
 >
 > **Part44.SimpleService**
 
+## Part 45 Reentrant concurrency mode in WCF
+
+[Part 45 YouTube](https://www.youtube.com/watch?v=YC8l6lkfXFg&list=PL6n9fhu94yhVxEyaRMaMN_-qnDdNVGsL1&index=45)
+
+> **Part45.WindowsClient**
+>
+> **Part45.ReportService**
+
 
 
