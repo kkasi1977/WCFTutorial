@@ -179,17 +179,17 @@ Please refer to the **Data** directory for course materials.
 
 [Part 24 YouTube](https://www.youtube.com/watch?v=EI8ZWezcC8Y&list=PL6n9fhu94yhVxEyaRMaMN_-qnDdNVGsL1&index=24)
 
-**Part24.HelloService**
-
-**Part24.WindowClient**
+> **Part24.HelloService**
+>
+> **Part24.WindowClient**
 
 ## Part 25 Self hosting a wcf service in winforms application
 
 [Part 25 YouTube](https://www.youtube.com/watch?v=EI8ZWezcC8Y&list=PL6n9fhu94yhVxEyaRMaMN_-qnDdNVGsL1&index=25)
 
-**Part25.HelloService**
-
-**Part25.WindowClient**
+> **Part25.HelloService**
+>
+> **Part25.WindowClient**
 
 ## Part 26 What is a windows service
 
@@ -199,9 +199,9 @@ Please refer to the **Data** directory for course materials.
 
 [Part 27 YouTube](https://www.youtube.com/watch?v=EI8ZWezcC8Y&list=PL6n9fhu94yhVxEyaRMaMN_-qnDdNVGsL1&index=27)
 
-**Part27.HelloService**
-
-**Part27.WindowClient**
+> **Part27.HelloService**
+>
+> **Part27.WindowClient**
 
 
 
@@ -213,9 +213,9 @@ Please refer to the **Data** directory for course materials.
 
 [Part 29 YouTube](https://www.youtube.com/watch?v=EI8ZWezcC8Y&list=PL6n9fhu94yhVxEyaRMaMN_-qnDdNVGsL1&index=29)
 
-**Part29.HelloService**
-
-**Part29.WindowClient**
+> **Part29.HelloService**
+>
+> **Part29.WindowClient**
 
 ## Part 30 Advantages and disadvantages of hosting wcf service in iis
 
@@ -229,33 +229,33 @@ Please refer to the **Data** directory for course materials.
 
 [Part 32 YouTube](https://www.youtube.com/watch?v=YC8l6lkfXFg&list=PL6n9fhu94yhVxEyaRMaMN_-qnDdNVGsL1&index=32)
 
-**Part32.SampleService**
-
-**Part32.WindowClient**
+> **Part32.SampleService**
+>
+> **Part32.WindowClient**
 
 ## Part 33 OneWay Message Exchange Pattern in WCF
 
 [Part 33 YouTube](https://www.youtube.com/watch?v=YC8l6lkfXFg&list=PL6n9fhu94yhVxEyaRMaMN_-qnDdNVGsL1&index=33)
 
-**Part33.SampleService**
-
-**Part33.WindowClient**
+> **Part33.SampleService**
+>
+> **Part33.WindowClient**
 
 ## Part 34 Duplex Message Exchange Pattern in WCF
 
 [Part 34 YouTube](https://www.youtube.com/watch?v=YC8l6lkfXFg&list=PL6n9fhu94yhVxEyaRMaMN_-qnDdNVGsL1&index=34)
 
-**Part34.DuplexClient**
-
-**Part34.ReportService**
+> **Part34.DuplexClient**
+>
+> **Part34.ReportService**
 
 ## Part 35 Sending large messages in WCF using MTOM
 
 [Part 35 YouTube](https://www.youtube.com/watch?v=YC8l6lkfXFg&list=PL6n9fhu94yhVxEyaRMaMN_-qnDdNVGsL1&index=35)
 
-**Part35.Client**
-
-**Part35.DownlaodService**
+> **Part35.Client**
+>
+> **Part35.DownlaodService**
 
 ## Part 36 Instancing modes in WCF
 
@@ -265,30 +265,39 @@ Please refer to the **Data** directory for course materials.
 
 [Part 37 YouTube](https://www.youtube.com/watch?v=YC8l6lkfXFg&list=PL6n9fhu94yhVxEyaRMaMN_-qnDdNVGsL1&index=37)
 
-**Part37.Client**
-
-**Part37.SimpleService**
+> **Part37.Client**
+>
+> **Part37.SimpleService**
 
 ## Part 38 PerSession instance context mode in WCF
 
 [Part 38 YouTube](https://www.youtube.com/watch?v=YC8l6lkfXFg&list=PL6n9fhu94yhVxEyaRMaMN_-qnDdNVGsL1&index=38)
 
-**Part38.WindowsClient**
-
-**Part38.SimpleService**
+> **Part38.WindowsClient**
+>
+> **Part38.SimpleService**
 
 ## Part 39 PerSession WCF Services
 
 [Part 39 YouTube](https://www.youtube.com/watch?v=YC8l6lkfXFg&list=PL6n9fhu94yhVxEyaRMaMN_-qnDdNVGsL1&index=39)
 
-**Part39.WindowsClient**
-
-**Part39.SimpleService**
+> **Part39.WindowsClient**
+>
+> **Part39.SimpleService**
 
 ## Part 40 How to retrieve the sessionid in WCF service and in the client application
 
 [Part 40 YouTube](https://www.youtube.com/watch?v=YC8l6lkfXFg&list=PL6n9fhu94yhVxEyaRMaMN_-qnDdNVGsL1&index=40)
 
-**Part40.WindowsClient**
+> **Part40.WindowsClient**
+>
+> **Part40.SimpleService**
 
-**Part40.SimpleService**
+## Part 41  Single instance context mode in WCF
+
+[Part 41 YouTube](https://www.youtube.com/watch?v=YC8l6lkfXFg&list=PL6n9fhu94yhVxEyaRMaMN_-qnDdNVGsL1&index=41)
+
+> **Part41.WindowsClient**
+>
+> **Part41.SimpleService**
+
