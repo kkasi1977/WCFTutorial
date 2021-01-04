@@ -293,11 +293,19 @@ Please refer to the **Data** directory for course materials.
 >
 > **Part40.SimpleService**
 
-## Part 41  Single instance context mode in WCF
+## Part 41 Single instance context mode in WCF
 
 [Part 41 YouTube](https://www.youtube.com/watch?v=YC8l6lkfXFg&list=PL6n9fhu94yhVxEyaRMaMN_-qnDdNVGsL1&index=41)
 
 > **Part41.WindowsClient**
 >
 > **Part41.SimpleService**
+
+## Part 42 SessionMode Enumeration in WCF
+
+[Part 42 YouTube](https://www.youtube.com/watch?v=YC8l6lkfXFg&list=PL6n9fhu94yhVxEyaRMaMN_-qnDdNVGsL1&index=42)
+
+> **Part42.WindowsClient**
+>
+> **Part42.SimpleService**
 

@@ -11,12 +11,7 @@ namespace WindowsClient
 {
     public partial class Form1 : Form
     {
-        /*testing Part28
-           1. build project 
-         * 2. go to bin directory
-         * 3. execute Form1.exe  2 instance
-         * 4. testing click button at 2 instance
-         */
+
         SimpleService.SimpleServiceClient client;
         public Form1()
         {
@@ -26,19 +21,6 @@ namespace WindowsClient
 
         private void button1_Click(object sender, EventArgs e)
         {
-            /*
-             Part 39 
-             * How to fix, The communication channel is in a faulted state exception
-                1. Put the line that calls the service should in the try block
-                2. Catch the CommunicationException
-                3. Check if the communication channel is in a faulted state and create a new instance of the proxy class. 
-             */
-
-            /*
-             Part 40 
-                To retrieve SessionId from the WCF service 
-                OperationContext.Current.SessionId
-             */
             try
             {
                 MessageBox.Show("Number = " + client.IncrementNumber().ToString() + "\n Session Id: " + client.InnerChannel.SessionId);

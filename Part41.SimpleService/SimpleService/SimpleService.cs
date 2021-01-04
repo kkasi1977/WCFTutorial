@@ -9,7 +9,7 @@ namespace SimpleService
 {
     // 참고: "리팩터링" 메뉴에서 "이름 바꾸기" 명령을 사용하여 코드 및 config 파일에서 클래스 이름 "SimpleService"을 변경할 수 있습니다.
 
-    /*Part40 Single instance context mode in WCF*/
+    /*Part41 Single instance context mode in WCF*/
     [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single)]
     public class SimpleService : ISimpleService
     {
