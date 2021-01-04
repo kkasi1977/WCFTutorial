@@ -309,13 +309,21 @@ Please refer to the **Data** directory for course materials.
 >
 > **Part42.SimpleService**
 
-## Part 43 WCF Concurrency 
+## Part 43 Single concurrency mode in WCF
 
 [Part 43 YouTube](https://www.youtube.com/watch?v=YC8l6lkfXFg&list=PL6n9fhu94yhVxEyaRMaMN_-qnDdNVGsL1&index=43)
 
 > **Part43.WindowsClient**
 >
 > **Part43.SimpleService**
+
+## Part 44 Multiple concurrency mode in WCF
+
+[Part 44 YouTube](https://www.youtube.com/watch?v=YC8l6lkfXFg&list=PL6n9fhu94yhVxEyaRMaMN_-qnDdNVGsL1&index=44)
+
+> **Part44.WindowsClient**
+>
+> **Part44.SimpleService**
 
 
 

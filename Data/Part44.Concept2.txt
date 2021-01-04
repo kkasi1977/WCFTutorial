@@ -1,0 +1,35 @@
+Instance Context Mode	: PerCall
+Concurrency Mode		: Multiple
+Binding supports session 	: No
+Concurrent Calls Processed	: Yes
+Throughput Impact	: Positive
+
+Instance Context Mode	: PerCall
+Concurrency Mode		: Multiple
+Binding supports session 	: Yes
+Concurrent Calls Processed	: Yes
+Throughput Impact	: Positive
+
+Instance Context Mode	: PerSession
+Concurrency Mode		: Multiple
+Binding supports session 	: No
+Concurrent Calls Processed	: Yes
+Throughput Impact	: Positive
+
+Instance Context Mode	: PerSession
+Concurrency Mode		: Multiple
+Binding supports session 	: Yes
+Concurrent Calls Processed	: Yes
+Throughput Impact	: Positive
+
+Instance Context Mode	: Single
+Concurrency Mode		: Multiple
+Binding supports session 	: No
+Concurrent Calls Processed	: Yes
+Throughput Impact	: Positive
+
+Instance Context Mode	: Single
+Concurrency Mode		: Multiple
+Binding supports session 	: Yes
+Concurrent Calls Processed	: Yes
+Throughput Impact	: Positive
