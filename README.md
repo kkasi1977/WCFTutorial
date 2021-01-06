@@ -333,5 +333,21 @@ Please refer to the **Data** directory for course materials.
 >
 > **Part45.ReportService**
 
+## Part 46 WCF throttling
+
+[Part 46 YouTube](https://www.youtube.com/watch?v=YC8l6lkfXFg&list=PL6n9fhu94yhVxEyaRMaMN_-qnDdNVGsL1&index=46)
+
+> **Part46.Client**
+>
+> **Part46.SimpleService**
+
+## Part 47 WCF security
+
+[Part 47 YouTube](https://www.youtube.com/watch?v=YC8l6lkfXFg&list=PL6n9fhu94yhVxEyaRMaMN_-qnDdNVGsL1&index=47)
+
+> **Part47.WindowsClient**
+>
+> **Part47.HelloService**
+
 
 
