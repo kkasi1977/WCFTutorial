@@ -1,23 +1,4 @@
-ï»¿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Serialization;
-using System.ServiceModel;
-using System.Text;
-
-namespace SimpleService
-{
-    // ì°¸ê³ : "ë¦¬íŒ©í„°ë§" ë©”ë‰´ì—ì„œ "ì´ë¦„ ë°”ê¾¸ê¸°" ëª…ë ¹ì„ ì‚¬ìš©í•˜ì—¬ ì½”ë“œ ë° config íŒŒì¼ì—ì„œ ì¸í„°í˜ì´ìŠ¤ ì´ë¦„ "ISimpleService"ì„ ë³€ê²½í•  ìˆ˜ ìˆìŠµë‹ˆë‹¤.
-    [ServiceContract]
-    public interface ISimpleService
-    {
-        [OperationContract(IsOneWay = true)]
-        void DoWork();
-    }
-}
-
-
-/*Part 46 WCF throttling
+Part 46 WCF throttling
 
 What is throughtput?
 Throuhtput is the amount of work done in a given time. 
@@ -85,15 +66,15 @@ Before WCF 4.0 and later
     MaxConcurrentInstances:MaxConcurrentCalls + MaxConcurrentSessions
 
 
-46 ë¶€ WCF ì¡°ì ˆ
+46 ºÎ WCF Á¶Àı
 
-ì²˜ë¦¬ëŸ‰ì´ë€ ë¬´ì—‡ì…ë‹ˆê¹Œ?
-Throuhtputì€ ì£¼ì–´ì§„ ì‹œê°„ì— ìˆ˜í–‰ ëœ ì‘ì—…ëŸ‰ì…ë‹ˆë‹¤.
-ì„œë¹„ìŠ¤ ì¸ìŠ¤í„´ìŠ¤ ì»¨í…ìŠ¤íŠ¸ ëª¨ë“œ ë° ë™ì‹œì„± ëª¨ë“œ ì™¸ì—ë„ ì œí•œ ì„¤ì •ì€ WCF ì„œë¹„ìŠ¤ì˜ ì²˜ë¦¬ì— ì˜í–¥ì„ì¤ë‹ˆë‹¤.
+Ã³¸®·®ÀÌ¶õ ¹«¾ùÀÔ´Ï±î?
+ThrouhtputÀº ÁÖ¾îÁø ½Ã°£¿¡ ¼öÇà µÈ ÀÛ¾÷·®ÀÔ´Ï´Ù.
+¼­ºñ½º ÀÎ½ºÅÏ½º ÄÁÅØ½ºÆ® ¸ğµå ¹× µ¿½Ã¼º ¸ğµå ¿Ü¿¡µµ Á¦ÇÑ ¼³Á¤Àº WCF ¼­ºñ½ºÀÇ Ã³¸®¿¡ ¿µÇâÀ»Áİ´Ï´Ù.
 
-ì œí•œ ì„¤ì •ì€ êµ¬ì„± íŒŒì¼ ë˜ëŠ” ì½”ë“œì—ì„œ ì§€ì •í•  ìˆ˜ ìˆìŠµë‹ˆë‹¤.
+Á¦ÇÑ ¼³Á¤Àº ±¸¼º ÆÄÀÏ ¶Ç´Â ÄÚµå¿¡¼­ ÁöÁ¤ÇÒ ¼ö ÀÖ½À´Ï´Ù.
 
-êµ¬ì„± íŒŒì¼ì˜ ì œí•œ ì„¤ì •.
+±¸¼º ÆÄÀÏÀÇ Á¦ÇÑ ¼³Á¤.
 <behaviors>
    <serviceBehaviors>
       <behavior name="throttlingBehavior">
@@ -105,11 +86,11 @@ Throuhtputì€ ì£¼ì–´ì§„ ì‹œê°„ì— ìˆ˜í–‰ ëœ ì‘ì—…ëŸ‰ì…ë‹ˆë‹¤.
    </serviceBehaviors>
 </behaviors>
 
-ì½”ë“œì˜ ì œí•œ ì„¤ì •
+ÄÚµåÀÇ Á¦ÇÑ ¼³Á¤
 
-(ServiceHost í˜¸ìŠ¤íŠ¸ = new ....) ì‚¬ìš©
+(ServiceHost È£½ºÆ® = new ....) »ç¿ë
 {
-    ServiceThrottlingBehavior throttlingBehavior = ì‹ ê·œ ...
+    ServiceThrottlingBehavior throttlingBehavior = ½Å±Ô ...
     {
             mexConcurrentCalls = "3",
             mexConcurrentInstances = "3",
@@ -120,36 +101,35 @@ Throuhtputì€ ì£¼ì–´ì§„ ì‹œê°„ì— ìˆ˜í–‰ ëœ ì‘ì—…ëŸ‰ì…ë‹ˆë‹¤.
    ...
 }
  
-ì°¸ê³  : ServiceThrottlingBehavior í´ë˜ìŠ¤ëŠ” System.ServiceModel.Description ë„¤ì„ ìŠ¤í˜ì´ìŠ¤ì— ìˆìŠµë‹ˆë‹¤.
+Âü°í : ServiceThrottlingBehavior Å¬·¡½º´Â System.ServiceModel.Description ³×ÀÓ ½ºÆäÀÌ½º¿¡ ÀÖ½À´Ï´Ù.
 
-ìœ„ì˜ ì œí•œ ì„¤ì •ì„ ì‚¬ìš©í•˜ë©´ ìµœëŒ€ 3 ê°œì˜ ë™ì‹œ í˜¸ì¶œì´ ì²˜ë¦¬ë©ë‹ˆë‹¤.
+À§ÀÇ Á¦ÇÑ ¼³Á¤À» »ç¿ëÇÏ¸é ÃÖ´ë 3 °³ÀÇ µ¿½Ã È£ÃâÀÌ Ã³¸®µË´Ï´Ù.
 
-maxConcurrentCalls ì†ì„± ì™¸ì—ë„ maxConcurrentInstances ë° maxConcurrentSessionsëŠ” ë™ì‹œì— ì²˜ë¦¬ë˜ëŠ” í˜¸ì¶œ ìˆ˜ì— ì˜í–¥ì„ ì¤„ ìˆ˜ ìˆìŠµë‹ˆë‹¤.
+maxConcurrentCalls ¼Ó¼º ¿Ü¿¡µµ maxConcurrentInstances ¹× maxConcurrentSessions´Â µ¿½Ã¿¡ Ã³¸®µÇ´Â È£Ãâ ¼ö¿¡ ¿µÇâÀ» ÁÙ ¼ö ÀÖ½À´Ï´Ù.
 
-ì˜ˆë¥¼ ë“¤ì–´ maxConcurrentCall = "3", maxConcurrentInstances = "2"ë° maxConcurrentSessions = "100"ë¥¼ ì„¤ì •í•˜ë©´
+¿¹¸¦ µé¾î maxConcurrentCall = "3", maxConcurrentInstances = "2"¹× maxConcurrentSessions = "100"¸¦ ¼³Á¤ÇÏ¸é
 
-PerCall ì¸ìŠ¤í„´ìŠ¤ ì»¨í…ìŠ¤íŠ¸ ëª¨ë“œì—ì„œëŠ” 2 ê°œì˜ í˜¸ì¶œ ë§Œ ë™ì‹œì— ì²˜ë¦¬ë©ë‹ˆë‹¤.
-ì´ëŠ” ëª¨ë“  í˜¸ì¶œì— ìƒˆ ì„œë¹„ìŠ¤ ì¸ìŠ¤í„´ìŠ¤ê°€ í•„ìš”í•˜ê³  ì—¬ê¸°ì„œëŠ” ìµœëŒ€ 2 ê°œì˜ ë™ì‹œ ì¸ìŠ¤í„´ìŠ¤ ë§Œ ìƒì„± í•  ìˆ˜ ìˆê¸° ë•Œë¬¸ì…ë‹ˆë‹¤.
+PerCall ÀÎ½ºÅÏ½º ÄÁÅØ½ºÆ® ¸ğµå¿¡¼­´Â 2 °³ÀÇ È£Ãâ ¸¸ µ¿½Ã¿¡ Ã³¸®µË´Ï´Ù.
+ÀÌ´Â ¸ğµç È£Ãâ¿¡ »õ ¼­ºñ½º ÀÎ½ºÅÏ½º°¡ ÇÊ¿äÇÏ°í ¿©±â¼­´Â ÃÖ´ë 2 °³ÀÇ µ¿½Ã ÀÎ½ºÅÏ½º ¸¸ »ı¼º ÇÒ ¼ö ÀÖ±â ¶§¹®ÀÔ´Ï´Ù.
 
-ë‹¨ì¼ ì¸ìŠ¤í„´ìŠ¤ ì»¨í…ìŠ¤íŠ¸ ëª¨ë“œì—ì„œëŠ” 3 ê°œì˜ í˜¸ì¶œì´ ë™ì‹œì— ì²˜ë¦¬ë©ë‹ˆë‹¤.
-ì‹±ê¸€ í†¤ ì„œë¹„ìŠ¤ì—ëŠ” ëª¨ë“  í´ë¼ì´ì–¸íŠ¸ì˜ ëª¨ë“  ìš”ì²­ì„ ì²˜ë¦¬í•˜ëŠ” ì„œë¹„ìŠ¤ ì¸ìŠ¤í„´ìŠ¤ê°€ í•˜ë‚˜ë§Œ ìˆê¸° ë•Œë¬¸ì…ë‹ˆë‹¤.
-ì‹±ê¸€ í†¤ì˜ ê²½ìš° maxConcurrentInstances ì†ì„±ì€ ì˜í–¥ì„ ë¯¸ì¹˜ì§€ ì•ŠìŠµë‹ˆë‹¤.
+´ÜÀÏ ÀÎ½ºÅÏ½º ÄÁÅØ½ºÆ® ¸ğµå¿¡¼­´Â 3 °³ÀÇ È£ÃâÀÌ µ¿½Ã¿¡ Ã³¸®µË´Ï´Ù.
+½Ì±Û Åæ ¼­ºñ½º¿¡´Â ¸ğµç Å¬¶óÀÌ¾ğÆ®ÀÇ ¸ğµç ¿äÃ»À» Ã³¸®ÇÏ´Â ¼­ºñ½º ÀÎ½ºÅÏ½º°¡ ÇÏ³ª¸¸ ÀÖ±â ¶§¹®ÀÔ´Ï´Ù.
+½Ì±Û ÅæÀÇ °æ¿ì maxConcurrentInstances ¼Ó¼ºÀº ¿µÇâÀ» ¹ÌÄ¡Áö ¾Ê½À´Ï´Ù.
 
-ì°¸ê³  : maxConcurrentSessionsëŠ” ëª¨ë“  ì„¸ì…˜ ìœ í˜•ì˜ í•©ê³„ì…ë‹ˆë‹¤.
-1. ì‹ ì²­ ì„¸ì…˜
-2. ìš´ì†¡ ì„¸ì…˜
-3. ì•ˆì •ì ì¸ ì„¸ì…˜
-4. ë³´ì•ˆ ì„¸ì…˜
+Âü°í : maxConcurrentSessions´Â ¸ğµç ¼¼¼Ç À¯ÇüÀÇ ÇÕ°èÀÔ´Ï´Ù.
+1. ½ÅÃ» ¼¼¼Ç
+2. ¿î¼Û ¼¼¼Ç
+3. ¾ÈÁ¤ÀûÀÎ ¼¼¼Ç
+4. º¸¾È ¼¼¼Ç
 
-ê¸°ë³¸:
-WCF 4.0 ì´ì „
+±âº»:
+WCF 4.0 ÀÌÀü
     MaxConcurrentCalls : 16
     MaxConcurrentSessions : 10
     MaxConcurrentInstances : MaxConcurrentCalls + MaxConcurrentSessions (26)
 
-WCF 4.0 ì´ìƒ ì´ì „
-    MaxConcurrentCalls : 16 * í”„ë¡œì„¸ì„œ ìˆ˜
-    MaxConcurrentSessions : 100 * í”„ë¡œì„¸ì„œ ìˆ˜
+WCF 4.0 ÀÌ»ó ÀÌÀü
+    MaxConcurrentCalls : 16 * ÇÁ·Î¼¼¼­ ¼ö
+    MaxConcurrentSessions : 100 * ÇÁ·Î¼¼¼­ ¼ö
     MaxConcurrentInstances : MaxConcurrentCalls + MaxConcurrentSessions
 
-*/
