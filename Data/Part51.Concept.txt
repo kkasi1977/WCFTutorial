@@ -1,0 +1,31 @@
+Part 51, Transport Security in WCF 
+
+In Part 47, we discussed Message confidentiality and integrity with message based security. 
+Out of the box, wsHttpBinding provides message based security. 
+Message based security automatically encrypts and signs the message to provide confidentiality and integrity. 
+We have practically seen this in Part 47, by inspecting the logged messages.
+
+Out of the box, netTcpBinding provides transport security. 
+Even with transport security, all messages are encrypted and signed. 
+
+With transport security, when you inspect the logged messages, surprisingly then are in plain text. 
+
+The reason for this is that, the messages are encrypted and signed at the transport layer. 
+By the time the message is arrived at the log it is already decrypted.  
+Hence, they appear in plain text. 
+
+51 부, WCF의 전송 보안
+
+47 부에서는 메시지 기반 보안을 통한 메시지 기밀성 및 무결성에 대해 논의했습니다.
+기본적으로 wsHttpBinding은 메시지 기반 보안을 제공합니다.
+메시지 기반 보안은 자동으로 메시지를 암호화하고 서명하여 기밀성과 무결성을 제공합니다.
+로깅 된 메시지를 검사하여 Part 47에서 실제로이를 확인했습니다.
+
+기본적으로 netTcpBinding은 전송 보안을 제공합니다.
+전송 보안을 사용하더라도 모든 메시지는 암호화되고 서명됩니다.
+
+전송 보안을 사용하면 기록 된 메시지를 검사 할 때 놀랍게도 일반 텍스트로 표시됩니다.
+
+그 이유는 메시지가 전송 계층에서 암호화되고 서명되기 때문입니다.
+메시지가 로그에 도착하면 이미 해독 된 상태입니다.
+따라서 일반 텍스트로 표시됩니다.

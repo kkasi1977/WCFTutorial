@@ -369,5 +369,13 @@ Please refer to the **Data** directory for course materials.
 >
 > **Part50.SimpleService**
 
+## Part 51 Message confidentiality and integrity with transport security
+
+[Part 51 YouTube](https://www.youtube.com/watch?v=YC8l6lkfXFg&list=PL6n9fhu94yhVxEyaRMaMN_-qnDdNVGsL1&index=51)
+
+> **Part51.Client** 
+>
+> **Part51.SimpleService**
+
 
 
