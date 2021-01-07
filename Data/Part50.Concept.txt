@@ -1,0 +1,91 @@
+Part 50,  Authentication in WCF
+
+In Part 47, we discussed how bindings provide confidentiality and ntegrity security features, out of the box without any additional configuration. 
+
+In this video we will discuss Authentication and in a later video we will discuss authorization. 
+Out of the box most bindings provide authentication without any additional configuration. 
+
+For example, out of the box, both wsHttpBinding and netTcpBinding provides windows authentication. 
+
+// Is user authenticated
+ServiceSecurityContext.Current.PrimaryIdentity.IsAuthenticated 
+
+// AuthenticationType
+ServiceSecurityContext.Current.PrimaryIdentity.Authenticationtype
+
+// Authenticated username
+ServiceSecurityContext.Current.PrimaryIdentity.Name 
+
+To customize the security mode for a binding, use mode attribute of security element with in the respecive binding 
+<bindings>
+   <netTcpBinding> 
+      <binding name="netTcp"
+         <security mode="">  <!-- None, Transport, Message, TransportWithMessageCredential -->
+   ...
+
+To customize the authentication mode for a binding, use clientCredentialType attribute of either the message element or transport element with in the respective binding 
+example 1)
+<bindings>
+   <netTcpBinding> 
+      <binding name="netTcp"
+         <security mode="Message">   
+            <message clientCredentialType="" /> <!-- None, Windows, UserName, Certificate, IssuedToken -->
+         </security>
+   ...
+ 
+example 2)
+<bindings>
+   <netTcpBinding> 
+      <binding name="netTcp"
+         <security mode="Transport">   
+            <transport clientCredentialType="" /> <!-- None, Windows, Certificate -->
+         </security>
+   ...
+
+
+
+50 부, WCF의 인증
+
+47 부에서는 바인딩이 추가 구성없이 바로 사용할 수있는 기밀성 및 무결성 보안 기능을 제공하는 방법에 대해 설명했습니다.
+
+이 비디오에서는 인증에 대해 설명하고 이후 비디오에서는 인증에 대해 설명합니다.
+기본적으로 대부분의 바인딩은 추가 구성없이 인증을 제공합니다.
+
+예를 들어 기본적으로 wsHttpBinding과 netTcpBinding은 모두 Windows 인증을 제공합니다.
+
+// 사용자 인증 여부
+ServiceSecurityContext.Current.PrimaryIdentity.IsAuthenticated
+
+// 인증 유형
+ServiceSecurityContext.Current.PrimaryIdentity.Authenticationtype
+
+// 인증 된 사용자 이름
+ServiceSecurityContext.Current.PrimaryIdentity.Name
+
+바인딩에 대한 보안 모드를 사용자 정의하려면 각 바인딩에서 보안 요소의 모드 속성을 사용하십시오.
+<bindings>
+   <netTcpBinding> 
+      <binding name="netTcp"
+         <security mode="">  <!-- None, Transport, Message, TransportWithMessageCredential -->
+   ...
+
+
+바인딩에 대한 인증 모드를 사용자 정의하려면 해당 바인딩에서 메시지 요소 또는 전송 요소의 clientCredentialType 속성을 사용하십시오. 
+
+예 1)
+<bindings>
+   <netTcpBinding> 
+      <binding name="netTcp"
+         <security mode="Message">   
+            <message clientCredentialType="" /> <!-- None, Windows, UserName, Certificate, IssuedToken -->
+         </security>
+   ...
+ 
+예 2)
+<bindings>
+   <netTcpBinding> 
+      <binding name="netTcp"
+         <security mode="Transport">   
+            <transport clientCredentialType="" /> <!-- None, Windows, Certificate -->
+         </security>
+   ...
