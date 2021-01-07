@@ -349,5 +349,19 @@ Please refer to the **Data** directory for course materials.
 >
 > **Part47.HelloService**
 
+## Part 48 Controlling WCF message protection using ProtectionLevel parameter
+
+[Part 48 YouTube](https://www.youtube.com/watch?v=YC8l6lkfXFg&list=PL6n9fhu94yhVxEyaRMaMN_-qnDdNVGsL1&index=48)
+
+> **Part48.WindowsClient**
+>
+> **Part48.HelloService**
+
+## Part 49 WCF Bindings and the impact on message protection
+
+[Part 49 YouTube](https://www.youtube.com/watch?v=YC8l6lkfXFg&list=PL6n9fhu94yhVxEyaRMaMN_-qnDdNVGsL1&index=49)
+
+
+
 
 

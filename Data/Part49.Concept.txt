@@ -1,0 +1,16 @@
+Part 49 WCF Bindings and the impact on message protection
+
+What happens if the binding does not provide security, and yu have explicitly set ProtectionLevel other than None
+An exception will be thrown
+
+For example, out of the box security is not enabled for basicHttpBinding. 
+So, if you set ProtectionLevel other than None using the ProtectionLevel named parameter as shown blow , An exception will be thrown
+
+
+49 부 WCF 바인딩 및 메시지 보호에 대한 영향
+
+바인딩이 보안을 제공하지 않고 None 이외의 ProtectionLevel을 명시 적으로 설정 한 경우 어떻게됩니까?
+예외가 발생합니다.
+
+예를 들어, 기본 보안은 basicHttpBinding에 대해 활성화되지 않습니다.
+따라서 아래와 같이 ProtectionLevel이라는 매개 변수를 사용하여 None 이외의 ProtectionLevel을 설정하면 예외가 발생합니다.
