@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="1c81b024-5471-4b7a-af77-bb1fe78b0efe" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://averatec/SimpleService/SimpleService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SimpleService.disco" MetadataType="Disco" ID="13ee9c6a-ce30-48ba-b7e0-7232415cd676" SourceId="1" SourceUrl="https://averatec/SimpleService/SimpleService.svc?disco" />
+    <MetadataFile FileName="SimpleService.wsdl" MetadataType="Wsdl" ID="68a93a12-34cf-4aa6-9cda-aaea2f14b039" SourceId="1" SourceUrl="https://averatec/SimpleService/SimpleService.svc?wsdl" />
+    <MetadataFile FileName="SimpleService.xsd" MetadataType="Schema" ID="f7d0f724-b203-497d-8123-d3343c7cdfd8" SourceId="1" SourceUrl="https://averatec/SimpleService/SimpleService.svc?xsd=xsd0" />
+    <MetadataFile FileName="SimpleService1.xsd" MetadataType="Schema" ID="05c72364-e3ed-4a8a-b112-4cb92d05c2bc" SourceId="1" SourceUrl="https://averatec/SimpleService/SimpleService.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
