@@ -1,0 +1,74 @@
+
+Part 52 Customising WCF Security by WSHttpBindding
+@Default 
+	Security Mode -> Message
+	ClientCredentialType -> Windows
+@Customize
+	Security Mode -> Transport
+	ClientCredentialType -> Basic
+	
+
+1) WCF WebApplication 
+
+@Edit web.config
+behavior
+	serviceMetadata httpsGetEnable=true
+binding
+	wsHttpBinding : security mode -> Transport, transport clientCredentialType -> Basic
+
+
+@example
+
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <system.serviceModel>
+    <bindings>
+      <wsHttpBinding>
+        <binding name="wsHttp">
+          <security mode="Transport">
+            <transport clientCredentialType="Basic"></transport>
+          </security>
+        </binding>
+      </wsHttpBinding>
+    </bindings>
+    <behaviors>
+      <serviceBehaviors>
+        <behavior name="mexBehavior">
+          <serviceMetadata httpsGetEnabled="true"/>
+          <serviceDebug includeExceptionDetailInFaults="false"/>
+        </behavior>
+      </serviceBehaviors>
+    </behaviors>
+    <services>
+      <service name="SimpleService.SimpleService" behaviorConfiguration="mexBehavior" >
+        <endpoint address="SimpleService" binding="wsHttpBinding" contract="SimpleService.ISimpleService" bindingConfiguration="wsHttp"/>
+        <host>
+          <baseAddresses>
+            <add baseAddress="http://localhost:8080"/>
+          </baseAddresses>
+        </host>
+      </service>
+    </services>
+  </system.serviceModel>
+  <system.webServer>
+    <modules runAllManagedModulesForAllRequests="true"/>
+  </system.webServer>
+</configuration>
+
+
+
+
+2) Setting IIS
+
+- Add application and binding
+
+- Detail setting
+    IIS Server
+	Server Certificates : Create Self-Signed Certificate..
+    Website
+	Edit Site - Bindinds : Add https 
+    Application
+	Authentication : Basic Authentication -> Enabled
+	SSL Settings : Require SSL -> Check, Client certificates -> Assept
+	
+		
