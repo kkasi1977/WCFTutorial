@@ -1,0 +1,66 @@
+
+
+Part 53 Customising WCF Security - II
+
+The default security mode for netTcpBinding is Transport. 
+Transport security provides message protection(Encryption and Digital signatures) at the transport layer.
+
+NetTcpBinding security mode
+    Detault 
+	Transport 
+    Custormize
+	Message
+
+
+We will customize netTcpBinding to use Message Security. 
+
+MSDN article contains all the system provided bindings and their security defaults.
+http://msdn.microsoft.com/en-us/library/ms731092(v=vs.110).aspx
+
+<bindings>
+   <netTcpBinding>
+      <binding name="netTcp"> 
+         <security mode="Message" />
+      </binding>
+   </netTcpBinding>
+</bindings>
+...
+<endpoint address="SimpleService"
+      binding="netTcpBinding"
+      contract="SimpleService.ISimpleService"
+      bindingConfiguration="netTcp" />
+...
+
+ 
+
+53 부 WCF 보안 사용자 지정-II
+
+netTcpBinding의 기본 보안 모드는 Transport입니다.
+전송 보안은 전송 계층에서 메시지 보호 (암호화 및 디지털 서명)를 제공합니다.
+
+NetTcpBinding security mode
+    Detault 
+	Transport 
+    Custormize
+	Message
+
+
+
+메시지 보안을 사용하도록 netTcpBinding을 사용자 정의합니다.
+
+MSDN 문서에는 모든 시스템 제공 바인딩 및 보안 기본값이 포함되어 있습니다.
+http://msdn.microsoft.com/en-us/library/ms731092(v=vs.110).aspx
+
+<bindings>
+   <netTcpBinding>
+      <binding name="netTcp"> 
+         <security mode="Message" />
+      </binding>
+   </netTcpBinding>
+</bindings>
+...
+<endpoint address="SimpleService"
+      binding="netTcpBinding"
+      contract="SimpleService.ISimpleService"
+      bindingConfiguration="netTcp" />
+...
